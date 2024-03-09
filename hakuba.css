@@ -1,0 +1,389 @@
+/* Global */
+
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Libre+Caslon+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Cinzel:wght@400..900&family=Libre+Caslon+Display&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    color: #BAB897;
+    font-size: 16px;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: "Baskervville", serif;
+}
+
+.title {
+    font-size: 3rem;
+    font-family: "Cinzel", serif;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    font-family: "Cinzel", serif;
+}
+
+.center {
+    text-align: center;
+}
+
+.blue {
+    color: #2A2D57;
+}
+
+.link {
+    color: white;
+    margin: 20px 0;
+    padding: 10px 20px;
+    transition: all 0.5s;
+    display: inline-block;
+    background-color: rgba(74, 80, 89, 0.5);
+    box-shadow: 2px 2px 10px 0px rgba(209, 204, 171, 0.1);
+}
+
+.link:hover {
+    background-color: rgba(74, 80, 89, 1);
+}
+
+.link > span {
+    color: white;
+    vertical-align: bottom;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 50px 0px;
+    justify-content: space-between;
+}
+
+li {
+    width: 30%;
+    list-style: none;
+}
+
+@media (max-width: 800px) {
+    li {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+}
+
+li > p {
+    color: #2A2D57;
+    margin-top: 20px;
+}
+
+.square {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    padding: 5%;
+}
+
+/* Hero */
+
+#hero {
+    position: relative;
+}
+
+#hero-img {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/hakuba/hero.jpg);
+}
+
+#hero-txt {
+    top: 60%;
+    left: 10%;
+    width: 80%;
+    position: absolute;
+}
+
+/* Hakuba */
+
+#japow {
+    background-image: url(img/hakuba/japow.jpg);
+}
+
+#green {
+    background-image: url(img/hakuba/green.jpg);
+}
+
+#access {
+    background-image: url(img/hakuba/access.jpeg);
+}
+
+/* Villa */
+
+#villa {
+    background: linear-gradient(to bottom, rgba(42, 45, 87, 0.2), white);
+}
+
+@media (min-width: 800px) {
+    #villa {
+        padding: 5% 20%;
+    }
+}
+
+#rendering {
+    margin: 50px auto;
+    position: relative;
+}
+
+#rendering > img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 10px 5px rgba(42, 45, 87, 0.3);
+}
+
+#dot {
+    left: 3%;
+    bottom: 3%;
+    display: flex;
+    position: absolute;
+}
+
+.dots {
+    margin: 3px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
+    border-radius: 100%;
+    background-color: white;
+}
+
+.slides {
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from { opacity: 0.5 };
+    to { opacity: 1 };
+}
+
+#concept > p {
+    color: #2A2D57;
+    margin-bottom: 30px;
+    line-height: 30px;
+}
+
+#concept > .subtitle::before {
+    content: '';
+    margin-right: 20px;
+    border-left: 5px solid #2A2D57;
+}
+
+/* Video */
+
+#youtube {
+    position: relative;
+    padding-top: 56.25%;
+}
+
+iframe {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Benefit */
+
+#benefit {
+    text-align: center;
+    margin: 50px 0px;
+}
+
+#benefit > li > span {
+    padding: 30px;
+    font-size: 5rem;
+    color: #2A2D57;
+    margin-bottom: 30px;
+    border-radius: 100%;
+    background: linear-gradient(145deg, #e6e6e6, #ffffff);
+    box-shadow:  20px 20px 60px #d9d9d9,
+                 -20px -20px 60px #ffffff;
+}
+
+/* Portfolio */
+
+.portfolio {
+    border: 1px solid rgba(42, 45, 87, 0.1);
+    box-shadow: 2px 2px 10px 0px rgba(209, 204, 171, 0.1);
+}
+
+.portfolio > p {
+    padding: 0px 20px;
+    line-height: 30px
+}
+
+#mysahakone {
+    background-image: url(img/hakuba/mysahakone.jpeg);
+}
+
+#thetimefuji {
+    background-image: url(img/hakuba/thetimefuji.jpg);
+}
+
+#mysafuji {
+    background-image: url(img/hakuba/mysafuji.jpg);
+}
+
+.split {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.split > a {
+    width: 40%;
+    text-align: center;
+}
+
+/* Faq */
+
+#accordion {
+    color: #2A2D57;
+    background: rgba(42, 45, 87, 0.1);
+}
+
+#accordion > ul {
+    display: block;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.faq {
+    width: 100%;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    .faq {
+        width: 100%;
+    }
+}
+
+.question {
+    color: #2A2D57;
+    max-height: 0px;
+    line-height: 30px;
+    overflow: hidden;
+    transition: all 0.5s;
+}
+
+label {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    transition: all 0.5s;
+    font-size: 1.2rem;
+    color: rgba(42, 45, 87, 1);
+}
+
+label::before {
+    content: '+';
+    font-size: 2rem;
+    margin-right: 20px;
+    transform: translateY(-2px);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + label + .question {
+    max-height: 800px;
+    padding: 30px;
+}
+
+input[type="radio"]:checked + label::before {
+    content: '-';
+    font-size: 2rem;
+    margin-right: 25px;
+    transform: translateY(-4px);
+}
+
+/* CTA */
+
+#contact {
+    margin: 0 auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+#contact > img {
+    width: 100%;
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+#cta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input {
+    width: 49%;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid rgba(232, 232, 232, 1);
+}
+
+#submit {
+    width: 100%;
+    margin: 10px 0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.5s;
+    background-color: rgba(74, 80, 89, 0.5);
+}
+
+#submit:hover {
+    background-color: rgba(74, 80, 89, 0.8);
+}
+
+/* Footer */
+
+footer {
+    padding: 50px 0px;
+    text-align: center;
+    border-top: 3px double rgba(186, 184, 151, 0.3);
+    background-color: rgba(186, 184, 151, 0.1);
+}
+
+#team {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+#team > div {
+    width: 50%;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 800px) {
+    #team > div {
+        width: 100%;
+    }
+}
+
+.logo {
+    width: 100%;
+    max-width: 200px;
+}
