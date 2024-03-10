@@ -22,10 +22,12 @@
 }
 
 #logo {
-    color: white;
     height: 70vh;
-    font-size: 3rem;
-    line-height: 30vh;
+    padding-top: 10vh;
+}
+
+#logo > img {
+    height: 60px;
 }
 
 .message {
