@@ -9,6 +9,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: "Cinzel", serif;
 }
 
@@ -74,7 +75,6 @@ span {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    background: linear-gradient(135deg, rgba(42, 45, 87, 0.3), rgba(42, 45, 87, 0));
 }
 
 #strategy > div {
@@ -101,12 +101,36 @@ span {
 
 /* Project */
 
+#project {
+    background: linear-gradient(135deg, rgba(42, 45, 87, 0.3), rgba(42, 45, 87, 0));
+}
+
+#project > ul > li {
+    background: white;
+}
+
 #hakuba {
     width: 100%;
     padding-top: 100%;
     background-size: cover;
     background-position: center;
     background-image: url(img/index/thetimefuji.jpg);
+}
+
+#saunaxx {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/index/saunaxx.webp);
+}
+
+#tbc {
+    width: 100%;
+    padding-top: 100%;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/index/call.jpg);
 }
 
 /* Research */

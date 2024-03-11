@@ -11,6 +11,7 @@
     list-style: none;
     text-decoration: none;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: "Baskervville", serif;
 }
 
@@ -254,6 +255,50 @@ iframe {
     text-align: center;
 }
 
+#pipeline > .portfolio {
+    width: 16%;
+}
+
+@media (max-width: 800px) {
+    #pipeline > .portfolio {
+        width: 49%;
+    }
+}
+
+#pl1 {
+    background-image: url(img/hakuba/pl1.jpg);
+}
+
+#pl2 {
+    background-image: url(img/hakuba/pl2.png);
+}
+
+#pl3 {
+    background-image: url(img/hakuba/pl3.jpg);
+}
+
+#pl4 {
+    background-image: url(img/hakuba/pl4.png);
+}
+
+#pl5 {
+    background-image: url(img/hakuba/pl5.jpg);
+}
+
+#pl6 {
+    background-image: url(img/hakuba/pl6.png);
+}
+
+.small {
+    font-family: "Cinzel", serif;
+}
+
+.small > span {
+    color: #2A2D57;
+    margin-right: 5px;
+    transform: translateY(6px);
+}
+
 
 /* Faq */
 
@@ -380,7 +425,7 @@ footer {
 
 #team > div {
     width: 50%;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 #team > div > p {
@@ -395,10 +440,11 @@ footer {
 
 .logo {
     height: 50px;
-    max-width: 200px;
+    margin: 10px 0;
 }
 
 #disclaimer {
+    padding: 0 20px;
     text-align: left;
     font-size: 0.8rem;
 }
