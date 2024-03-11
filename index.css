@@ -77,19 +77,23 @@ span {
     justify-content: space-between;
 }
 
-#strategy > div {
+#strategy-txt {
     width: 55%;
     margin-bottom: 20px;
 }
 
-#strategy > div > p {
+#strategy-txt > p {
     color: #2A2D57;
     margin-bottom: 20px;
 }
 
-#strategy > img {
+#strategy-img {
     width: 34%;
+    padding-top: 34%;
     border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    background-image: url(img/index/test.jpg);
     box-shadow: 5px 5px 10px 5px rgba(232, 232, 232, 1);
 }
 
