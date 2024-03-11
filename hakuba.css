@@ -229,7 +229,7 @@ iframe {
 }
 
 .portfolio > p {
-    padding: 0px 20px;
+    padding: 0px 15px;
     line-height: 30px
 }
 
@@ -251,7 +251,7 @@ iframe {
 }
 
 .split > a {
-    width: 40%;
+    width: 45%;
     text-align: center;
 }
 
