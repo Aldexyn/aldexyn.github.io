@@ -99,7 +99,7 @@ section {
     height: 100vh;
     background-size: cover;
     background-position: center;
-    background-image: url(img/hakuba/hero.jpg);
+    background-image: url(img/hero.jpg);
 }
 
 #hero-txt {
@@ -112,15 +112,15 @@ section {
 /* Hakuba */
 
 #japow {
-    background-image: url(img/hakuba/japow.jpg);
+    background-image: url(img/japow.jpg);
 }
 
 #green {
-    background-image: url(img/hakuba/green.jpg);
+    background-image: url(img/green.jpg);
 }
 
 #access {
-    background-image: url(img/hakuba/access.jpeg);
+    background-image: url(img/access.jpeg);
 }
 
 /* Villa */
@@ -234,15 +234,15 @@ iframe {
 }
 
 #mysahakone {
-    background-image: url(img/hakuba/mysahakone.jpeg);
+    background-image: url(img/mysahakone.jpeg);
 }
 
 #thetimefuji {
-    background-image: url(img/hakuba/thetimefuji.jpg);
+    background-image: url(img/thetimefuji.jpg);
 }
 
 #mysafuji {
-    background-image: url(img/hakuba/mysafuji.jpg);
+    background-image: url(img/mysafuji.jpg);
 }
 
 .split {
@@ -266,27 +266,27 @@ iframe {
 }
 
 #pl1 {
-    background-image: url(img/hakuba/pl1.jpg);
+    background-image: url(img/pl1.jpg);
 }
 
 #pl2 {
-    background-image: url(img/hakuba/pl2.png);
+    background-image: url(img/pl2.png);
 }
 
 #pl3 {
-    background-image: url(img/hakuba/pl3.jpg);
+    background-image: url(img/pl3.jpg);
 }
 
 #pl4 {
-    background-image: url(img/hakuba/pl4.jpg);
+    background-image: url(img/pl4.jpg);
 }
 
 #pl5 {
-    background-image: url(img/hakuba/pl5.jpg);
+    background-image: url(img/pl5.jpg);
 }
 
 #pl6 {
-    background-image: url(img/hakuba/pl6.png);
+    background-image: url(img/pl6.png);
 }
 
 .small {
