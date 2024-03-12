@@ -129,12 +129,6 @@ section {
     background: linear-gradient(to bottom, rgba(42, 45, 87, 0.2), white);
 }
 
-@media (min-width: 800px) {
-    #villa {
-        padding: 5% 20%;
-    }
-}
-
 #rendering {
     margin: 50px auto;
     position: relative;
@@ -178,10 +172,47 @@ section {
     line-height: 30px;
 }
 
-#concept > .subtitle::before {
+.border {
+    color: #2A2D57;
+    margin-bottom: 30px;
+}
+
+.border::before {
     content: '';
     margin-right: 20px;
     border-left: 5px solid #2A2D57;
+}
+
+@media (min-width: 800px) {
+    #villa, #blueprint {
+        padding: 5% 20%;
+    }
+}
+
+/* Blueprint */
+
+#blueprint > img {
+    width: 100%;
+}
+
+.split > img {
+    width: 48%;
+    border-radius: 5px;
+}
+
+.split > p {
+    width: 50%;
+    padding: 15px;
+    text-align: right;
+    font-style: italic;
+}
+
+#bath {
+    background-image: url(img/bath.png);
+}
+
+#sauna {
+    background-image: url(img/sauna.png);
 }
 
 /* Benefit */
@@ -231,6 +262,7 @@ section {
 
 .split {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
