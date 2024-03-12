@@ -68,13 +68,13 @@ li {
 @media (max-width: 800px) {
     li {
         width: 100%;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
     }
 }
 
 li > p {
     color: #2A2D57;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 .square {
@@ -184,26 +184,10 @@ section {
     border-left: 5px solid #2A2D57;
 }
 
-/* Video */
-
-#youtube {
-    position: relative;
-    padding-top: 56.25%;
-}
-
-iframe {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-}
-
 /* Benefit */
 
 #benefit {
     text-align: center;
-    margin: 50px 0px;
 }
 
 #benefit > li > span {
@@ -213,8 +197,8 @@ iframe {
     margin-bottom: 30px;
     border-radius: 100%;
     background: linear-gradient(145deg, #e6e6e6, #ffffff);
-    box-shadow:  20px 20px 60px #d9d9d9,
-                 -20px -20px 60px #ffffff;
+    box-shadow:  10px 10px 30px #d9d9d9,
+                 -10px -10px 30px #ffffff;
 }
 
 /* Portfolio */
@@ -290,6 +274,7 @@ iframe {
 }
 
 .small {
+    margin-top: 0;
     font-family: "Cinzel", serif;
 }
 
@@ -318,12 +303,6 @@ iframe {
     padding: 10px;
 }
 
-@media (max-width: 800px) {
-    .faq {
-        width: 100%;
-    }
-}
-
 .question {
     color: #2A2D57;
     max-height: 0px;
@@ -341,6 +320,10 @@ label {
     color: rgba(42, 45, 87, 1);
 }
 
+label:hover {
+    padding-left: 5px;
+}
+
 label::before {
     content: '+';
     font-size: 2rem;
@@ -353,14 +336,14 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + label + .question {
-    max-height: 800px;
-    padding: 30px;
+    max-height: 1000px;
+    padding: 10px;
 }
 
 input[type="radio"]:checked + label::before {
     content: '-';
     font-size: 2rem;
-    margin-right: 25px;
+    margin-right: 20px;
     transform: translateY(-4px);
 }
 
@@ -400,6 +383,7 @@ input {
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.5s;
+    font-family: "Cinzel", serif;
     background-color: rgba(74, 80, 89, 0.5);
 }
 
@@ -420,7 +404,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    max-width: 600px;
+    max-width: 700px;
 }
 
 #team > div {
@@ -432,14 +416,8 @@ footer {
     font-family: "Cinzel", serif;
 }
 
-@media (max-width: 800px) {
-    #team > div {
-        width: 100%;
-    }
-}
-
 .logo {
-    height: 50px;
+    height: 45px;
     margin: 10px 0;
 }
 
