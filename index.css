@@ -53,13 +53,11 @@ section {
     font-family: "Cinzel", serif;
 }
 
-/* Message */
+/* Investment */
 
-#message > p {
+#investment > p {
     margin-bottom: 20px;
 }
-
-/* Project */
 
 ul {
     display: flex;
@@ -79,31 +77,81 @@ li > p, li > a > p {
     box-shadow: 3px 3px 10px 0px rgba(232, 232, 232, 0.5);
 }
 
-#villa {
+.project > div {
     width: 100%;
-    padding-top: 100%;
+    padding-top: 50%;
     background-size: cover;
     background-position: center;
+}
+
+#villa {
     background-image: url(img/thetimefuji.jpg);
 }
 
 #saunaxx {
-    width: 100%;
-    padding-top: 100%;
-    background-size: cover;
-    background-position: center;
     background-image: url(img/saunaxx.png);
 }
 
 #tbc {
-    width: 100%;
-    padding-top: 100%;
-    background-size: cover;
-    background-position: center;
     background-image: url(img/call.jpg);
 }
 
-/* Research */
+/* IR */
+
+#news {
+    padding: 30px 0;
+    margin-bottom: 200px;
+}
+
+.article {
+    width: 49%;
+    margin: 5px 0;
+    transition: all 0.5s;
+    border: 1px solid rgba(232, 232, 232, 1);
+    box-shadow: 3px 3px 10px 0px rgba(232, 232, 232, 0.5);
+}
+
+.article:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 5px 3px rgba(232, 232, 232, 0.5);
+}
+
+.subtitle {
+    text-align: center;
+}
+
+#voice {
+    margin: 50px 0 300px 0;
+}
+
+.headache {
+    width: 100%;
+    font-size: 1.3rem;
+    text-align: center;
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+@keyframes fade {
+    from { opacity: 0.5 };
+    to { opacity: 1 };
+}
+
+#service {
+    margin: 50px 0 100px 0;
+}
+
+#strategy {
+    background-image: url(img/strategy.jpg);
+}
+
+#material {
+    background-image: url(img/material.jpg);
+}
+
+#consulting {
+    background-image: url(img/consulting.jpg);
+}
 
 .research {
     width: 19%;
@@ -186,6 +234,9 @@ form > * {
 }
 
 @media (max-width: 800px) {
+    .article {
+        width: 100%;
+    }
     .research {
         width: 49%;
     }
