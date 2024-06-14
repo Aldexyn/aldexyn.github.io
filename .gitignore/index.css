@@ -17,41 +17,13 @@ section {
 
 .title {
     font-size: 1.5rem;
-    padding-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .title::before {
     content: '';
     margin-right: 20px;
     border-left: 5px solid #2A2D57;
-}
-
-ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-li > p, li > a > p {
-    padding: 10px;
-}
-
-.project {
-    width: 32%;
-    margin-bottom: 30px;
-    border: 1px solid rgba(232, 232, 232, 1);
-    box-shadow: 3px 3px 10px 0px rgba(232, 232, 232, 0.5);
-}
-
-.project > div {
-    width: 100%;
-    padding-top: 50%;
-    background-size: cover;
-    background-position: center;
-}
-
-.project > p {
-    padding: 10px;
 }
 
 /* Hero */
@@ -86,34 +58,99 @@ li > p, li > a > p {
     margin-bottom: 20px;
 }
 
-#takala {
-    background-image: url(img/takala.jpeg);
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-#saunaxx {
-    background-image: url(img/saunaxx.png);
+li > p, li > a > p {
+    padding: 10px;
+}
+
+.project {
+    width: 32%;
+    margin-bottom: 30px;
+    border: 1px solid rgba(232, 232, 232, 1);
+    box-shadow: 3px 3px 10px 0px rgba(232, 232, 232, 0.5);
+}
+
+.project > div {
+    width: 100%;
+    padding-top: 50%;
+    background-size: cover;
+    background-position: center;
 }
 
 #villa {
     background-image: url(img/thetimefuji.jpg);
 }
 
-/* ADVISORY */
+#saunaxx {
+    background-image: url(img/saunaxx.png);
+}
 
-.category {
+#tbc {
+    background-image: url(img/takala.jpeg);
+}
+
+/* IR */
+
+.subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+#voice {
+    margin: 100px 0;
+}
+
+.headache {
+    width: 100%;
     font-size: 1.5rem;
+    text-align: center;
+    animation-name: fade;
+    animation-duration: 3s;
 }
 
-#ma {
-    background-image: url(img/ma.jpg);
+@keyframes fade {
+    from { opacity: 0.5 };
+    to { opacity: 1 };
 }
 
-#credit {
-    background-image: url(img/credit.jpg);
+#news {
+    padding: 30px 0;
 }
 
-#ir {
-    background-image: url(img/ir.jpg);
+.article {
+    width: 49%;
+    margin-bottom: 10px;
+    transition: all 0.5s;
+    border: 1px solid rgba(232, 232, 232, 1);
+    box-shadow: 3px 3px 10px 0px rgba(232, 232, 232, 0.5);
+}
+
+.article:hover {
+    transform: translateY(-3px);
+    box-shadow: 5px 5px 5px 3px rgba(232, 232, 232, 0.5);
+}
+
+#service {
+    padding: 50px 0;
+    margin-bottom: 30px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+#strategy {
+    background-image: url(img/strategy.jpg);
+}
+
+#material {
+    background-image: url(img/material.jpg);
+}
+
+#consulting {
+    background-image: url(img/consulting.jpg);
 }
 
 .research {
