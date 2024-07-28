@@ -15,22 +15,40 @@
         <div class="container">
             <a href="#" class="navbar-brand"><img src="image/logo.png" style="height: 40px"></a>
             <div>
-                <a href="/eng.html" class="nav-item btn btn-sm btn-primary">簡體字</a>
-                <a href="/eng.html" class="nav-item btn btn-sm btn-primary">English</a>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">簡體字</a>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">English</a>
             </div>
         </div>
     </nav>
 
     <header style="height: 80vh; background-size: cover; background-position: center; background-image: url(image/hero.jpg);">
         <div class="container" style="padding-top: 50vh">
-            <h1 style="color: white">日本買房沒退過稅？</h1>
-            <h3 style="color: white">日返：專為華人租房退稅服務</h3>
-            <a href="#" class="btn btn-primary">免費商量</a>
+            <h1 style="color: white">日本租房沒退過稅？</h1>
+            <h3 style="color: white">專為華人退稅服務</h3>
+            <h5 style="color: white">前金なし・個人情報不要</h5>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact">免費商量</button>
+            <div class="modal fade" id="contact">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>選択してください</h5>
+                            <button class="btn-close" data-bs-dismiss="contact"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-grid">
+                                <button class="btn btn-success">WeChat</button><br>
+                                <button class="btn btn-success">WhatsApp</button><br>
+                                <button class="btn btn-success">LINE</button><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 稅金過繳問題</h3><br>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 過払い税金とは？</h3><br>
         <p>日本非居民若在日本出租不動產，為避免漏繳租賃所得稅，通常會從租賃收入中預先扣繳20%的所得稅。雖然這部分扣繳款項在多數情況下都可以申請退稅，但由於日本非居民缺乏日本稅務知識且難以進行確定申告，因此實際獲得退稅的情況並不多。以下模擬計算器可幫助您估算在日本出租不動產所產生的租賃所得中，您可能過繳的稅額，也就是說，您可以申請退回的扣繳稅款金額。</p>
         <div class="container" style="padding: 10%; background-size: cover; background-position: center; background-image: url(image/simulator.jpg);">
             <h3 style="color: white;">過払い税金シミュレーター</h3><br>
@@ -63,15 +81,20 @@
                 <button id="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" disabled>試算</button>
             </div>
             <div class="modal fade" id="modal">
-                <div class="modal-dialog">
+                <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>年間還付額の試算</h5>
-                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        <div class="modal-header bg-success">
+                            <h5 class="text-white">日返が目指す還付額の試算</h5>
+                            <button class="btn-close btn-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
-                            <p>日返のサービスをご利用いただくことで、年間 <b id="est"></b> の税金の還付が受けられる可能性があります。</p>
-                            <p>※東京都の築浅マンションの区分所有を前提とした試算であり、実際の還付額とは異なります</p>
+                            <h1 id="est" class="text-center text-success" style="font-size: 48px"></h1>
+                            <p>※ 一定の前提のもとに試算しており、実際の還付額とは異なる可能性があります</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success">WeChat</button>
+                            <button class="btn btn-success">WhatsApp</button>
+                            <button class="btn btn-success">LINE</button>
                         </div>
                     </div>
                 </div>
@@ -85,9 +108,9 @@
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white;">
                     <span class="material-symbols-outlined">bolt</span>
-                    成功報酬
+                    完全成功報酬
                 </div>
-                <div class="card-body">日返はお客様の過払い源泉徴収還付額から成功報酬として20%を受領しており、着手金や固定報酬をいただくことは一切ありません</div>
+                <div class="card-body">我們完全按照成功結果收費，即成功追回多繳稅款後，我們僅收取追回金額的20%作為報酬。其他如啟動資金或固定費用等，我們一概不收去</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 着手金の支払い</p>
@@ -97,26 +120,25 @@
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white">
                     <span class="material-symbols-outlined">bolt</span>
-                    中国語対応
+                    一站式服務
                 </div>
-                <div class="card-body">日返は日本人税理士に加えて中国語ネイティブが常駐しており、お客様とのご連絡からレポートまで全て中国語で対応いたいします</div>
-                <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本人の機械翻訳</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本語の還付レポート</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-header bg-success" style="font-weight: bold; color: white">
-                    <span class="material-symbols-outlined">bolt</span>
-                    綜合服務
-                </div>
-                <div class="card-body">日返は過払い税金の還付だけでなく、修繕管理費や固定資産税の納入や管理会社への連絡まで面倒な業務を一括で受託いたします</div>
+                <div class="card-body">我們提供一站式服務，不僅處理多繳稅款的退換，還包括維修管理費，不動產稅的繳納以及與管理公司的聯絡等所有繁瑣事務</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 納付代行は非対応</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理会社連絡窓口なし</p>
                 </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white">
+                    <span class="material-symbols-outlined">bolt</span>
+                    中文對應
+                </div>
+                <div class="card-body">我們不僅有日本税理士，還有常駐的中文母語工作人員，可以全程用中文與您溝通，包括報告等</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本人の機械翻訳</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本語の還付レポート</p>
                 </div>
             </div>
         </div>
@@ -126,7 +148,7 @@
         <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 服務流程</h3><br>
         <div class="card-group">
             <div class="card">
-                <div class="card-header bg-success" style="font-weight: bold; color: white;"> 1. コンサルティング</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white;"> 1. コンサルティング</div>
                 <img src="image/consultation.jpg" class="card-img-body">
                 <div class="card-body">微信・WhatsApp・LINEでご連絡いただくと、日返の中国語スタッフがお電話にてサービス内容をご説明させていただきます</div>
                 <div class="card-footer">
@@ -136,7 +158,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header bg-success" style="font-weight: bold; color: white"> 2. 納税管理人の指定</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 納税管理人の指定</div>
                 <img src="image/signature.jpg" class="card-img-body">
                 <div class="card-body">お客様は弊社を納税管理人に任命するだけ、還付申請に必要な書類は弊社から賃貸管理会社及び管理会社に照会請求します</div>
                 <div class="card-footer">
@@ -146,7 +168,7 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header bg-success" style="font-weight: bold; color: white"> 3. 過払い税金の還付</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 過払い税金の還付</div>
                 <img src="image/bonus.jpg" class="card-img-body">
                 <div class="card-body">nヶ月以内を目安に過払い税金の還付、お客様の外国口座当てに海外送金</div>
                 <div class="card-footer">
@@ -164,7 +186,7 @@
         <div class="accordion" id="accordion">
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">Questions 1</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">個人情報の取り扱いは？</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
                     <div class="accordion-body">
@@ -174,7 +196,7 @@
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">Questions 2</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">必要な書類は？</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
                     <div class="accordion-body">
@@ -184,7 +206,7 @@
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">Questions 3</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">既に担当税理士がいる</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
                     <div class="accordion-body">
@@ -223,7 +245,7 @@
                     <img src="image/hero.jpg" class="card-img-top">
                     <div class="card-header" style="font-weight: bold;">
                         <span class="material-symbols-outlined">open_in_new</span>
-                        陳先生（中國）
+                        林先生（中國）
                     </div>
                 </a>
             </div>
@@ -251,24 +273,6 @@
                     <div class="card-header" style="font-weight: bold;">
                         <span class="material-symbols-outlined">open_in_new</span>
                         陳先生（中國）
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <img src="image/hero.jpg" class="card-img-top">
-                    <div class="card-header" style="font-weight: bold;">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        王先生（香港）
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <img src="image/hero.jpg" class="card-img-top">
-                    <div class="card-header" style="font-weight: bold;">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        陳小姐（台湾）
                     </div>
                 </a>
             </div>
@@ -412,7 +416,7 @@
             const liability = taxable * 0.1;
             const refund = withheld - liability;
             const round = Math.round(refund / 10000);
-            est.textContent = round + '万円';
+            est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万円/年';
         });
     </script>
 
