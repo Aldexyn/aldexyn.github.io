@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=”icon” href=“image/favicon.ico”>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>span { transform: translateY(6px) }</style>
+    <title>日返</title>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand">
+        <div class="container">
+            <a href="#" class="navbar-brand"><img src="image/logo.png" style="height: 40px"></a>
+            <div>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-primary">簡體字</a>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-primary">English</a>
+            </div>
+        </div>
+    </nav>
+
+    <header style="height: 80vh; background-size: cover; background-position: center; background-image: url(image/hero.jpg);">
+        <div class="container" style="padding-top: 50vh">
+            <h1 style="color: white">日本買房沒退過稅？</h1>
+            <h3 style="color: white">日返：專為華人租房退稅服務</h3>
+            <a href="#" class="btn btn-primary">免費商量</a>
+        </div>
+    </header><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 稅金過繳問題</h3><br>
+        <p>日本非居民若在日本出租不動產，為避免漏繳租賃所得稅，通常會從租賃收入中預先扣繳20%的所得稅。雖然這部分扣繳款項在多數情況下都可以申請退稅，但由於日本非居民缺乏日本稅務知識且難以進行確定申告，因此實際獲得退稅的情況並不多。以下模擬計算器可幫助您估算在日本出租不動產所產生的租賃所得中，您可能過繳的稅額，也就是說，您可以申請退回的扣繳稅款金額。</p>
+        <div class="container" style="padding: 10%; background-size: cover; background-position: center; background-image: url(image/simulator.jpg);">
+            <h3 style="color: white;">過払い税金シミュレーター</h3><br>
+            <div class="form-floating">
+                <input type="number" id="rent" placeholder="p" class="form-control" required>
+                <label for="rent">租金（日幣/月）</label>
+                <br>
+            </div>
+            <div class="form-floating">
+                <input type="number" id="area" placeholder="p" class="form-control" required>
+                <label for="area">延床面積（平米）</label>
+                <br>
+            </div>
+            <div class="form-floating">
+                <input type="number" id="year" placeholder="p" class="form-control" required>
+                <label for="year">築年数（年）</label>
+                <br>
+            </div>
+            <div class="form-floating">
+                <select class="form-select" id="structure" required>
+                    <option>RC造（マンションで一般的）</option>
+                    <option>木造（一軒家で一般的）</option>
+                    <option>鉄骨造</option>
+                    <option>SRC造</option>
+                </select>
+                <label for="structure">建物構造</label>
+                <br>
+            </div>
+            <div class="d-grid">
+                <button id="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" disabled>試算</button>
+            </div>
+            <div class="modal fade" id="modal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5>年間還付額の試算</h5>
+                            <button class="btn-close" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <p>日返のサービスをご利用いただくことで、年間 <b id="est"></b> の税金の還付が受けられる可能性があります。</p>
+                            <p>※東京都の築浅マンションの区分所有を前提とした試算であり、実際の還付額とは異なります</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 日返の特徴</h3><br>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white;">
+                    <span class="material-symbols-outlined">bolt</span>
+                    成功報酬
+                </div>
+                <div class="card-body">日返はお客様の過払い源泉徴収還付額から成功報酬として20%を受領しており、着手金や固定報酬をいただくことは一切ありません</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 着手金の支払い</p>
+                    <p><span class="material-symbols-outlined" style="color: red;" >cancel</span> 固定報酬の支払い</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white">
+                    <span class="material-symbols-outlined">bolt</span>
+                    中国語対応
+                </div>
+                <div class="card-body">日返は日本人税理士に加えて中国語ネイティブが常駐しており、お客様とのご連絡からレポートまで全て中国語で対応いたいします</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本人の機械翻訳</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本語の還付レポート</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white">
+                    <span class="material-symbols-outlined">bolt</span>
+                    綜合服務
+                </div>
+                <div class="card-body">日返は過払い税金の還付だけでなく、修繕管理費や固定資産税の納入や管理会社への連絡まで面倒な業務を一括で受託いたします</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 納付代行は非対応</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理会社連絡窓口なし</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 服務流程</h3><br>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white;"> 1. コンサルティング</div>
+                <img src="image/consultation.jpg" class="card-img-body">
+                <div class="card-body">微信・WhatsApp・LINEでご連絡いただくと、日返の中国語スタッフがお電話にてサービス内容をご説明させていただきます</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 個人情報の入力</p>
+                    <p><span class="material-symbols-outlined" style="color: red;" >cancel</span> テキストでのやり取り</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white"> 2. 納税管理人の指定</div>
+                <img src="image/signature.jpg" class="card-img-body">
+                <div class="card-body">お客様は弊社を納税管理人に任命するだけ、還付申請に必要な書類は弊社から賃貸管理会社及び管理会社に照会請求します</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 必要書類をお客様に請求</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理会社への連絡代行なし</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white"> 3. 過払い税金の還付</div>
+                <img src="image/bonus.jpg" class="card-img-body">
+                <div class="card-body">nヶ月以内を目安に過払い税金の還付、お客様の外国口座当てに海外送金</div>
+                <div class="card-footer">
+                    <p>＜他社の対応＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 不明瞭な還付プロセス</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 海外口座への送金不可</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> FAQ</h3><br>
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">Questions 1</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">Questions 2</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">Questions 3</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a3">Questions 4</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a4" aria-labelledyby="q4" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">Questions 5</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a5" aria-labelledyby="q5" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> お客様の声</h3><br>
+        <div class="card-group">
+            <div class="card">
+                <a href="#">
+                    <img src="image/hero.jpg" class="card-img-top">
+                    <div class="card-header" style="font-weight: bold;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        陳先生（中國）
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="image/hero.jpg" class="card-img-top">
+                    <div class="card-header" style="font-weight: bold;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        王先生（香港）
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="image/hero.jpg" class="card-img-top">
+                    <div class="card-header" style="font-weight: bold;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        陳小姐（台湾）
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="image/hero.jpg" class="card-img-top">
+                    <div class="card-header" style="font-weight: bold;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        陳先生（中國）
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="image/hero.jpg" class="card-img-top">
+                    <div class="card-header" style="font-weight: bold;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        王先生（香港）
+                    </div>
+                </a>
+            </div>
+            <div class="card">
+                <a href="#">
+                    <img src="image/hero.jpg" class="card-img-top">
+                    <div class="card-header" style="font-weight: bold;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        陳小姐（台湾）
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> お問い合わせ</h3><br>
+        <div class="card-group">
+            <div class="card">
+                <img src="image/hero.jpg" class="card-img-top">
+                <div class="card-header" style="font-weight: bold;">微信</div>
+                <div class="card-body">弊社はお客様の過払い税金の還付額から成功報酬として20%を受領しており、他社のように着手金や固定報酬をいただくことは一切ありません</div>
+            </div>
+            <div class="card">
+                <img src="image/hero.jpg" class="card-img-top">
+                <div class="card-header" style="font-weight: bold;">WhatsApp</div>
+                <div class="card-body">弊社は日本人税理士に加えて、中国語ネイティブが常駐しており、お客様とのご連絡及び還付レポートまで全て中国語で対応いたいします</div>
+            </div>
+            <div class="card">
+                <img src="image/hero.jpg" class="card-img-top">
+                <div class="card-header" style="font-weight: bold;">LINE</div>
+                <div class="card-body">お客様のご要望に応じて、過払い税金の還付だけでなく、修繕管理費の納入や固定資産税の納付まで面倒な業務を一括で受託いたします</div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <footer class="bg-dark" style="height: 30vh; display: flex; align-items: center; justify-content: center;">
+        <img src="image/logo-white.png" style="height: 10vh">
+    </footer>
+
+    <script>
+        const data = [
+            {"year":1959,"src":34.1,"rc":20.2,"steel":13.7,"wood":8.7},
+            {"year":1960,"src":30.9,"rc":21.4,"steel":13.4,"wood":9.1},
+            {"year":1961,"src":39.5,"rc":23.9,"steel":14.9,"wood":10.3},
+            {"year":1962,"src":40.9,"rc":27.2,"steel":15.9,"wood":12.2},
+            {"year":1963,"src":41.3,"rc":27.1,"steel":14.6,"wood":13.5},
+            {"year":1964,"src":49.1,"rc":29.5,"steel":16.6,"wood":15.1},
+            {"year":1965,"src":45,"rc":30.3,"steel":17.9,"wood":16.8},
+            {"year":1966,"src":42.4,"rc":30.6,"steel":17.8,"wood":18.2},
+            {"year":1967,"src":43.6,"rc":33.7,"steel":19.6,"wood":19.9},
+            {"year":1968,"src":48.6,"rc":36.2,"steel":21.7,"wood":22.2},
+            {"year":1969,"src":50.9,"rc":39,"steel":23.6,"wood":24.9},
+            {"year":1970,"src":54.3,"rc":42.9,"steel":26.1,"wood":28},
+            {"year":1971,"src":61.2,"rc":47.2,"steel":30.3,"wood":31.2},
+            {"year":1972,"src":61.6,"rc":50.2,"steel":32.4,"wood":34.2},
+            {"year":1973,"src":77.6,"rc":64.3,"steel":42.2,"wood":45.3},
+            {"year":1974,"src":113,"rc":90.1,"steel":55.7,"wood":61.8},
+            {"year":1975,"src":126.4,"rc":97.4,"steel":60.5,"wood":67.7},
+            {"year":1976,"src":114.6,"rc":98.2,"steel":62.1,"wood":70.3},
+            {"year":1977,"src":121.8,"rc":102,"steel":65.3,"wood":74.1},
+            {"year":1978,"src":122.4,"rc":105.9,"steel":70.1,"wood":77.9},
+            {"year":1979,"src":128.9,"rc":114.3,"steel":75.4,"wood":82.5},
+            {"year":1980,"src":149.4,"rc":129.7,"steel":84.1,"wood":92.5},
+            {"year":1981,"src":161.8,"rc":138.7,"steel":91.7,"wood":98.3},
+            {"year":1982,"src":170.9,"rc":143,"steel":93.9,"wood":101.3},
+            {"year":1983,"src":168,"rc":143.8,"steel":94.3,"wood":102.2},
+            {"year":1984,"src":161.2,"rc":141.7,"steel":95.3,"wood":102.8},
+            {"year":1985,"src":172.2,"rc":144.5,"steel":96.9,"wood":104.2},
+            {"year":1986,"src":181.9,"rc":149.5,"steel":102.6,"wood":106.2},
+            {"year":1987,"src":191.8,"rc":156.6,"steel":108.4,"wood":110},
+            {"year":1988,"src":203.6,"rc":175,"steel":117.3,"wood":116.5},
+            {"year":1989,"src":237.3,"rc":193.3,"steel":128.4,"wood":123.1},
+            {"year":1990,"src":286.7,"rc":222.9,"steel":147.4,"wood":131.7},
+            {"year":1991,"src":329.8,"rc":246.8,"steel":158.7,"wood":137.6},
+            {"year":1992,"src":333.7,"rc":245.6,"steel":162.4,"wood":143.5},
+            {"year":1993,"src":300.3,"rc":227.5,"steel":159.2,"wood":150.9},
+            {"year":1994,"src":262.9,"rc":212.8,"steel":148.4,"wood":156.6},
+            {"year":1995,"src":228.8,"rc":199,"steel":143.2,"wood":158.3},
+            {"year":1996,"src":229.7,"rc":198,"steel":143.6,"wood":161},
+            {"year":1997,"src":223,"rc":201,"steel":141,"wood":160.5},
+            {"year":1998,"src":225.6,"rc":203.8,"steel":138.7,"wood":158.6},
+            {"year":1999,"src":220.9,"rc":197.9,"steel":139.4,"wood":159.3},
+            {"year":2000,"src":204.3,"rc":182.6,"steel":132.3,"wood":159},
+            {"year":2001,"src":186.1,"rc":177.8,"steel":136.4,"wood":157.2},
+            {"year":2002,"src":195.2,"rc":180.5,"steel":135,"wood":153.6},
+            {"year":2003,"src":187.3,"rc":179.5,"steel":131.4,"wood":152.7},
+            {"year":2004,"src":190.1,"rc":176.1,"steel":130.6,"wood":152.1},
+            {"year":2005,"src":185.7,"rc":171.5,"steel":132.8,"wood":151.9},
+            {"year":2006,"src":170.5,"rc":178.6,"steel":133.7,"wood":152.9},
+            {"year":2007,"src":182.5,"rc":185.8,"steel":135.6,"wood":153.6},
+            {"year":2008,"src":229.1,"rc":206.1,"steel":158.3,"wood":156},
+            {"year":2009,"src":265.2,"rc":219,"steel":169.5,"wood":156.6},
+            {"year":2010,"src":226.4,"rc":205.9,"steel":163,"wood":156.5},
+            {"year":2011,"src":238.4,"rc":197,"steel":158.9,"wood":156.8},
+            {"year":2012,"src":223.3,"rc":193.9,"steel":155.6,"wood":157.6},
+            {"year":2013,"src":258.5,"rc":203.8,"steel":164.3,"wood":159.9},
+            {"year":2014,"src":276.2,"rc":228,"steel":176.4,"wood":163},
+            {"year":2015,"src":262.2,"rc":240.2,"steel":197.3,"wood":165.4},
+            {"year":2016,"src":308.3,"rc":254.2,"steel":204.1,"wood":165.9},
+            {"year":2017,"src":350.4,"rc":265.5,"steel":214.6,"wood":166.7},
+            {"year":2018,"src":304.2,"rc":263.1,"steel":214.1,"wood":168.5},
+            {"year":2019,"src":363.3,"rc":285.6,"steel":228.8,"wood":170.1},
+            {"year":2020,"src":279.2,"rc":276.9,"steel":230.2,"wood":172},
+            {"year":2021,"src":338.4,"rc":288.2,"steel":227.3,"wood":172.2}
+        ];
+        const rent = document.getElementById('rent');
+        const area = document.getElementById('area');
+        const year = document.getElementById('year');
+        const input = document.querySelectorAll('input');
+        const structure = document.getElementById('structure');
+        const submit = document.getElementById('submit');
+        const est = document.getElementById('est');
+        input.forEach(i => {
+            i.addEventListener('keyup', function() {
+                let check = true;
+                input.forEach(e => {
+                    if (e.value === '') check = false;
+                    else if (isNaN(e.value)) check = false;
+                });
+                if (check) submit.disabled = false;
+                else submit.disabled = true;
+            })
+        })
+        submit.addEventListener('click', function() {
+            const income = Number(rent.value) * 12;
+            const fee = income * 0.055;
+            const provision = income * 0.15;
+            const find = data.find(d => d.year === Number(year.value));
+            let multiple = find.steel;
+            let life = 0.025;
+            if (structure.value === 'SRC') {
+                multiple = find.src;
+                life = 0.015;
+            } else if (structure.value === 'RC') {
+                multiple = find.rc;
+                life = 0.015;
+            } else if (structure.value === '鉄骨') {
+                multiple = find.steel; 
+                life = 0.025;
+            } else if (structure.value === '木造') {
+                multiple = find.wood;
+                life = 0.034;
+            }
+            const value = Number(area.value) * multiple * 1000;
+            const depreciation = value * 0.9 * life;
+            const tax = 150000;
+            const taxable = income - fee - provision - depreciation - tax;
+            const withheld = income * 0.2;
+            const liability = taxable * 0.1;
+            const refund = withheld - liability;
+            const round = Math.round(refund / 10000);
+            est.textContent = round + '万円';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
