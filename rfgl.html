@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>span { transform: translateY(6px) }</style>
-    <title>日返</title>
+    <title>日返管理</title>
 </head>
 <body class="bg-light">
 
@@ -24,21 +24,17 @@
     <header style="height: 80vh; background-size: cover; background-position: center; background-image: url(image/hero.jpg);">
         <div class="container" style="padding-top: 50vh">
             <h1 style="color: white">日本租房沒退過稅？</h1>
-            <h3 style="color: white">專為華人退稅服務</h3>
-            <h5 style="color: white">前金なし・個人情報不要</h5>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact">免費商量</button>
+            <h3 style="color: white">平均で家賃の10％以上の還付実績</h3>
+            <h5 style="color: white">華人向けの不動産管理・税務のプロ</h5><br>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
             <div class="modal fade" id="contact">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5>選択してください</h5>
-                            <button class="btn-close" data-bs-dismiss="contact"></button>
-                        </div>
                         <div class="modal-body">
                             <div class="d-grid">
-                                <button class="btn btn-success">WeChat</button><br>
+                                <button class="btn btn-success">微信</button><br>
                                 <button class="btn btn-success">WhatsApp</button><br>
-                                <button class="btn btn-success">LINE</button><br>
+                                <button class="btn btn-success">LINE</button>
                             </div>
                         </div>
                     </div>
@@ -48,29 +44,29 @@
     </header><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 過払い税金とは？</h3><br>
-        <p>日本非居民若在日本出租不動產，為避免漏繳租賃所得稅，通常會從租賃收入中預先扣繳20%的所得稅。雖然這部分扣繳款項在多數情況下都可以申請退稅，但由於日本非居民缺乏日本稅務知識且難以進行確定申告，因此實際獲得退稅的情況並不多。以下模擬計算器可幫助您估算在日本出租不動產所產生的租賃所得中，您可能過繳的稅額，也就是說，您可以申請退回的扣繳稅款金額。</p>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 税金の還付とは？</h3><br>
+        <p>日本の非居住者が日本の不動産を賃貸する場合は、あらかじめ賃料から約20%が源泉徴収されることが一般的ですが、日本の非居住者に日本の税務知識や確定申告の機会がないために、源泉徴収の還付を受けるケースは多くありません。以下では、お客様が弊社のサービスを通して還付可能な金額を計算することができます。</p>
         <div class="container" style="padding: 10%; background-size: cover; background-position: center; background-image: url(image/simulator.jpg);">
-            <h3 style="color: white;">過払い税金シミュレーター</h3><br>
+            <h3 style="color: white;">還付金額シミュレーター</h3><br>
             <div class="form-floating">
-                <input type="number" id="rent" placeholder="p" class="form-control" required>
-                <label for="rent">租金（日幣/月）</label>
+                <input type="number" id="rent" placeholder="p" class="form-control" min="0" required>
+                <label for="rent">家賃（日本円/月）</label>
                 <br>
             </div>
             <div class="form-floating">
-                <input type="number" id="area" placeholder="p" class="form-control" required>
+                <input type="number" id="area" placeholder="p" class="form-control" min="0" required>
                 <label for="area">延床面積（平米）</label>
                 <br>
             </div>
             <div class="form-floating">
-                <input type="number" id="year" placeholder="p" class="form-control" required>
+                <input type="number" id="year" placeholder="p" class="form-control" min="1959" max="2021" required>
                 <label for="year">築年数（年）</label>
                 <br>
             </div>
             <div class="form-floating">
                 <select class="form-select" id="structure" required>
                     <option>RC造（マンションで一般的）</option>
-                    <option>木造（一軒家で一般的）</option>
+                    <option>木造</option>
                     <option>鉄骨造</option>
                     <option>SRC造</option>
                 </select>
@@ -84,7 +80,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header bg-success">
-                            <h5 class="text-white">日返が目指す還付額の試算</h5>
+                            <h5 class="text-white">還付額の試算</h5>
                             <button class="btn-close btn-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
@@ -103,14 +99,14 @@
     </div><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 日返の特徴</h3><br>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 日返管理の特徴</h3><br>
         <div class="card-group">
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white;">
                     <span class="material-symbols-outlined">bolt</span>
-                    完全成功報酬
+                    着手金なし
                 </div>
-                <div class="card-body">我們完全按照成功結果收費，即成功追回多繳稅款後，我們僅收取追回金額的20%作為報酬。其他如啟動資金或固定費用等，我們一概不收去</div>
+                <div class="card-body">日返管理は税金の還付金額の中から成功報酬をいただいており、ご相談の際の着手金や毎月の固定報酬などは一切発生しません</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 着手金の支払い</p>
@@ -120,9 +116,9 @@
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white">
                     <span class="material-symbols-outlined">bolt</span>
-                    一站式服務
+                    ワンストップサービス
                 </div>
-                <div class="card-body">我們提供一站式服務，不僅處理多繳稅款的退換，還包括維修管理費，不動產稅的繳納以及與管理公司的聯絡等所有繁瑣事務</div>
+                <div class="card-body">日返管理は税金の還付だけでなく、毎月の管理費や毎年の固定資産税の納入代行、さらに賃貸管理会社や物件管理会社との連絡まで承ります</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 納付代行は非対応</p>
@@ -132,9 +128,9 @@
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white">
                     <span class="material-symbols-outlined">bolt</span>
-                    中文對應
+                    中国語対応
                 </div>
-                <div class="card-body">我們不僅有日本税理士，還有常駐的中文母語工作人員，可以全程用中文與您溝通，包括報告等</div>
+                <div class="card-body">日返管理のチームは日本の税理士と中国語ネイティブで構成されており、ご相談やご連絡、そして還付レポートまで中国語で対応いたします</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本人の機械翻訳</p>
@@ -145,22 +141,22 @@
     </div><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 服務流程</h3><br>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> ご利用の流れ</h3><br>
         <div class="card-group">
             <div class="card">
                 <div class="card-header bg-dark" style="font-weight: bold; color: white;"> 1. コンサルティング</div>
                 <img src="image/consultation.jpg" class="card-img-body">
-                <div class="card-body">微信・WhatsApp・LINEでご連絡いただくと、日返の中国語スタッフがお電話にてサービス内容をご説明させていただきます</div>
+                <div class="card-body">微信/WhatsApp/LINEでお問い合わせいただくと、日返管理の中国語ネイティブスタッフがお電話でサービス内容をご紹介いたします。この時点では個人情報はお聞きしませんのでご安心ください</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 個人情報の入力</p>
-                    <p><span class="material-symbols-outlined" style="color: red;" >cancel</span> テキストでのやり取り</p>
+                    <p><span class="material-symbols-outlined" style="color: red;" >cancel</span> メールでのやり取り</p>
                 </div>
             </div>
             <div class="card">
-                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 納税管理人の指定</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 契約書へのサイン</div>
                 <img src="image/signature.jpg" class="card-img-body">
-                <div class="card-body">お客様は弊社を納税管理人に任命するだけ、還付申請に必要な書類は弊社から賃貸管理会社及び管理会社に照会請求します</div>
+                <div class="card-body">お客様は日返管理を納税管理人に選任するだけ。還付申請に必要な書類は日返管理が賃貸管理会社及び管理会社に照会するため、お客様が昔の資料を掘り起こす必要はありません</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 必要書類をお客様に請求</p>
@@ -168,15 +164,18 @@
                 </div>
             </div>
             <div class="card">
-                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 過払い税金の還付</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 還付金額の送金</div>
                 <img src="image/bonus.jpg" class="card-img-body">
-                <div class="card-body">nヶ月以内を目安に過払い税金の還付、お客様の外国口座当てに海外送金</div>
+                <div class="card-body">契約から2ヶ月以内を目安に還付金額をお客様の海外銀行口座宛に送金いたします。なお、将来の管理費や固定資産税の納入のため、一部を日返管理でお預かりすることも可能です</div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
                     <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 不明瞭な還付プロセス</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 海外口座への送金不可</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理費や固定資産税は別途納入</p>
                 </div>
                 </div>
+            </div><br>
+            <div class="d-grid">
+                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
             </div>
         </div>
     </div><br><br><br><br><br>
@@ -186,52 +185,26 @@
         <div class="accordion" id="accordion">
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">個人情報の取り扱いは？</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">還付を受けるために必要な書類は？</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
-                    </div>
+                    <div class="accordion-body">お客様から賃貸管理会社と物件管理会社へ日返管理をご紹介いただければ、日返管理から還付に必要な書類を照会いたしますので、お客様で特別にご用意いただく資料はございませんので、お気軽にお問い合わせください。</div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">必要な書類は？</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">日返管理で還付金額が適切に処理される保証は？</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
-                    </div>
+                    <div class="accordion-body">日返管理がお客様より「納税管理人」に選任いただきますが、納税管理人には善管注意義務が課されています。日返管理では、経験豊富な税理士が適切に納税処理を実施した上で、還付の詳細な内訳までご報告いたします。</div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">既に担当税理士がいる</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">既に納税代理人を選任している場合は？</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="q4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a3">Questions 4</button>
-                </h5>
-                <div class="accordion-collapse collapse" id="a4" aria-labelledyby="q4" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="q5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">Questions 5</button>
-                </h5>
-                <div class="accordion-collapse collapse" id="a5" aria-labelledyby="q5" data-bs-parent="#accordion">
-                    <div class="accordion-body">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nemo magnam dolorum, iure corrupti officiis ab amet asperiores quasi ea voluptatem molestiae hic consequuntur enim! Ut ea totam excepturi mollitia!
-                    </div>
+                    <div class="accordion-body">日返管理がお客様より評価されている理由は、税金の還付にとどまらない総合的なサービスを提供している点です。日返管理では、賃貸管理会社や物件管理会社との連絡、管理費や固定資産税の納入など、非居住者として面倒な業務まで一括で受託しています。ご希望の場合は、日返管理への切り替えまでサポートさせていただきます。</div>
                 </div>
             </div>
         </div>
@@ -242,38 +215,17 @@
         <div class="card-group">
             <div class="card">
                 <a href="#">
-                    <img src="image/hero.jpg" class="card-img-top">
-                    <div class="card-header" style="font-weight: bold;">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        林先生（中國）
-                    </div>
+                    <img src="image/tbu.png" class="card-img-top">
                 </a>
             </div>
             <div class="card">
                 <a href="#">
-                    <img src="image/hero.jpg" class="card-img-top">
-                    <div class="card-header" style="font-weight: bold;">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        王先生（香港）
-                    </div>
+                    <img src="image/tbu.png" class="card-img-top">
                 </a>
             </div>
             <div class="card">
                 <a href="#">
-                    <img src="image/hero.jpg" class="card-img-top">
-                    <div class="card-header" style="font-weight: bold;">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        陳小姐（台湾）
-                    </div>
-                </a>
-            </div>
-            <div class="card">
-                <a href="#">
-                    <img src="image/hero.jpg" class="card-img-top">
-                    <div class="card-header" style="font-weight: bold;">
-                        <span class="material-symbols-outlined">open_in_new</span>
-                        陳先生（中國）
-                    </div>
+                    <img src="image/tbu.png" class="card-img-top">
                 </a>
             </div>
         </div>
@@ -281,21 +233,21 @@
 
     <div class="container">
         <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> お問い合わせ</h3><br>
-        <div class="card-group">
-            <div class="card">
-                <img src="image/hero.jpg" class="card-img-top">
-                <div class="card-header" style="font-weight: bold;">微信</div>
-                <div class="card-body">弊社はお客様の過払い税金の還付額から成功報酬として20%を受領しており、他社のように着手金や固定報酬をいただくことは一切ありません</div>
+        <div class="row">
+            <div class="col-sm-6 border-start border-success border-5">
+                <h3>日返管理合同会社</h3>
+                <br>
+                <p>事業：華人向け日本の不動産管理業務</p>
+                <p>設立：2024年7月</p>
+                <p>資本金：1,000,000円</p>
+                <p>代表者：佐藤　隆太朗</p>
+                <button class="btn btn-success">微信</button>
+                <button class="btn btn-success">WhatsApp</button>
+                <button class="btn btn-success">LINE</button>
+                <br>
             </div>
-            <div class="card">
-                <img src="image/hero.jpg" class="card-img-top">
-                <div class="card-header" style="font-weight: bold;">WhatsApp</div>
-                <div class="card-body">弊社は日本人税理士に加えて、中国語ネイティブが常駐しており、お客様とのご連絡及び還付レポートまで全て中国語で対応いたいします</div>
-            </div>
-            <div class="card">
-                <img src="image/hero.jpg" class="card-img-top">
-                <div class="card-header" style="font-weight: bold;">LINE</div>
-                <div class="card-body">お客様のご要望に応じて、過払い税金の還付だけでなく、修繕管理費の納入や固定資産税の納付まで面倒な業務を一括で受託いたします</div>
+            <div class="col-sm-6">
+                <img src="image/team.jpg" style="width: 100%">
             </div>
         </div>
     </div><br><br><br><br><br>
