@@ -49,23 +49,66 @@
         <div class="container" style="padding: 10%; background-size: cover; background-position: center; background-image: url(image/simulator.jpg);">
             <h3 style="color: white;">還付金額シミュレーター</h3><br>
             <div class="form-floating">
-                <input type="number" id="rent" placeholder="p" class="form-control" min="0" required>
-                <label for="rent">家賃（日本円/月）</label>
+                <select id="rent" class="form-select">
+                    <option></option>
+                    <option>10万円</option>
+                    <option>15万円</option>
+                    <option>20万円</option>
+                    <option>25万円</option>
+                    <option>30万円</option>
+                    <option>35万円</option>
+                    <option>40万円</option>
+                    <option>45万円</option>
+                    <option>50万円</option>
+                    <option>60万円</option>
+                    <option>70万円</option>
+                    <option>80万円</option>
+                    <option>90万円</option>
+                    <option>100万円</option>
+                </select>
+                <label for="rent">家賃（月額）</label>
                 <br>
             </div>
             <div class="form-floating">
-                <input type="number" id="area" placeholder="p" class="form-control" min="0" required>
+                <select id="area" class="form-select">
+                    <option></option>
+                    <option>20平米</option>
+                    <option>25平米</option>
+                    <option>30平米</option>
+                    <option>35平米</option>
+                    <option>40平米</option>
+                    <option>45平米</option>
+                    <option>50平米</option>
+                    <option>60平米</option>
+                    <option>70平米</option>
+                    <option>80平米</option>
+                    <option>90平米</option>
+                    <option>100平米</option>
+                </select>
                 <label for="area">延床面積（平米）</label>
                 <br>
             </div>
             <div class="form-floating">
-                <input type="number" id="year" placeholder="p" class="form-control" min="1959" max="2021" required>
+                <select id="year" class="form-select">
+                    <option></option>
+                    <option>5年</option>
+                    <option>10年</option>
+                    <option>15年</option>
+                    <option>20年</option>
+                    <option>25年</option>
+                    <option>30年</option>
+                    <option>35年</option>
+                    <option>40年</option>
+                    <option>45年</option>
+                    <option>50年</option>
+                </select>
                 <label for="year">築年数（年）</label>
                 <br>
             </div>
             <div class="form-floating">
-                <select class="form-select" id="structure" required>
-                    <option>RC造（マンションで一般的）</option>
+                <select id="structure" class="form-select">
+                    <option></option>
+                    <option>RC造</option>
                     <option>木造</option>
                     <option>鉄骨造</option>
                     <option>SRC造</option>
@@ -104,25 +147,27 @@
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white;">
                     <span class="material-symbols-outlined">bolt</span>
-                    着手金なし
+                    着手金なし！
                 </div>
-                <div class="card-body">日返管理は税金の還付金額の中から成功報酬をいただいており、ご相談の際の着手金や毎月の固定報酬などは一切発生しません</div>
+                <div class="card-body">
+                    日返管理は税金の還付金額の中から成功報酬（5万円・税抜）をいただいており、ご相談の着手金や月々の固定税理士報酬などは一切発生しません！
+                </div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 着手金の支払い</p>
-                    <p><span class="material-symbols-outlined" style="color: red;" >cancel</span> 固定報酬の支払い</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> ご相談の着手金や月々の固定税理士報酬の発生</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white">
                     <span class="material-symbols-outlined">bolt</span>
-                    ワンストップサービス
+                    資料請求の丸投げ！
                 </div>
-                <div class="card-body">日返管理は税金の還付だけでなく、毎月の管理費や毎年の固定資産税の納入代行、さらに賃貸管理会社や物件管理会社との連絡まで承ります</div>
+                <div class="card-body">
+                    賃貸管理費、修繕積立金、固定資産税、減価償却費などの記録は全て日返管理が各業者に照会するため、お客様で準備する必要は一切ありません！
+                </div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 納付代行は非対応</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理会社連絡窓口なし</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> お客様が過去の収支表を準備して税理士に開示</p>
                 </div>
             </div>
             <div class="card">
@@ -130,13 +175,56 @@
                     <span class="material-symbols-outlined">bolt</span>
                     中国語対応
                 </div>
-                <div class="card-body">日返管理のチームは日本の税理士と中国語ネイティブで構成されており、ご相談やご連絡、そして還付レポートまで中国語で対応いたします</div>
+                <div class="card-body">
+                    日返管理は日本の税理士と中国語ネイティブスタッフで構成されており、ご相談や還付レポートの作成まで全て中国語で対応させていただきます！
+                </div>
                 <div class="card-footer">
                     <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本人の機械翻訳</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 日本語の還付レポート</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 還付レポートが日本語で記載、詳細が不明瞭</p>
                 </div>
             </div>
+        </div><br>
+        <div class="d-grid">
+            <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> ワンストップサービス</h3><br>
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">納入代行サービス</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        毎月の修繕積立金や毎年の固定資産税の支払いのために、わざわざ銀行で海外送金の手続きをしていませんか？日返管理では還付金額をそのままお客様に送金するだけでなく、私たちでお預かりすることで将来の費用の納入代行サービスも提供しております。お客様ご自身での海外送金の手間を省けるだけでなく、海外送金手数料も不要になる便利なサービスです。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">リノベーションサービス</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        賃貸不動産を買ったままで放置していませんか？賃貸不動産は経年劣化により、空室の期間が長くなるリスクや賃料減額交渉のリスクが生まれます。日返管理では賃貸管理会社にリノベーションを依頼するよりもお手頃な価格で、お客様のお部屋をリノベーションして賃貸利回りを高めるご提案が可能です。
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">売買仲介サービス</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        仲介業者の言いなりになって、専属専任契約を結んでいませんか？一般的に仲介業者は値段の妥当性よりも成約を急ぐ傾向にありますが、日返管理では複数の仲介業者との窓口になることで、お客様の不動産の賃貸状況や相場状況と照らし合わせながら、理想的な価格での売却が可能になります。
+                    </div>
+                </div>
+            </div><br>
+            <div class="d-grid">
+                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
+            </div>    
         </div>
     </div><br><br><br><br><br>
 
@@ -146,66 +234,27 @@
             <div class="card">
                 <div class="card-header bg-dark" style="font-weight: bold; color: white;"> 1. コンサルティング</div>
                 <img src="image/consultation.jpg" class="card-img-body">
-                <div class="card-body">微信/WhatsApp/LINEでお問い合わせいただくと、日返管理の中国語ネイティブスタッフがお電話でサービス内容をご紹介いたします。この時点では個人情報はお聞きしませんのでご安心ください</div>
-                <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 個人情報の入力</p>
-                    <p><span class="material-symbols-outlined" style="color: red;" >cancel</span> メールでのやり取り</p>
+                <div class="card-body">
+                    微信/WhatsApp/LINEでお問い合わせいただくと、日返管理の中国語ネイティブスタッフがお電話でサービス内容をご紹介いたします。この時点では個人情報はお聞きしませんのでご安心ください
                 </div>
             </div>
             <div class="card">
                 <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 契約書へのサイン</div>
                 <img src="image/signature.jpg" class="card-img-body">
-                <div class="card-body">お客様は日返管理を納税管理人に選任するだけ。還付申請に必要な書類は日返管理が賃貸管理会社及び管理会社に照会するため、お客様が昔の資料を掘り起こす必要はありません</div>
-                <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 必要書類をお客様に請求</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理会社への連絡代行なし</p>
+                <div class="card-body">
+                    お客様は日返管理を納税管理人に選任するだけ。還付申請に必要な書類は日返管理が賃貸管理会社及び管理会社に照会するため、お客様が昔の資料を掘り起こす必要はありません
                 </div>
             </div>
             <div class="card">
                 <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 還付金額の送金</div>
                 <img src="image/bonus.jpg" class="card-img-body">
-                <div class="card-body">契約から2ヶ月以内を目安に還付金額をお客様の海外銀行口座宛に送金いたします。なお、将来の管理費や固定資産税の納入のため、一部を日返管理でお預かりすることも可能です</div>
-                <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 不明瞭な還付プロセス</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 管理費や固定資産税は別途納入</p>
+                <div class="card-body">
+                    契約から2ヶ月以内を目安に還付金額をお客様の海外銀行口座宛に送金いたします。なお、将来の管理費や固定資産税の納入のため、一部を日返管理でお預かりすることも可能です
                 </div>
                 </div>
             </div><br>
             <div class="d-grid">
                 <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
-            </div>
-        </div>
-    </div><br><br><br><br><br>
-
-    <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> FAQ</h3><br>
-        <div class="accordion" id="accordion">
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="q1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">還付を受けるために必要な書類は？</button>
-                </h5>
-                <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
-                    <div class="accordion-body">お客様から賃貸管理会社と物件管理会社へ日返管理をご紹介いただければ、日返管理から還付に必要な書類を照会いたしますので、お客様で特別にご用意いただく資料はございませんので、お気軽にお問い合わせください。</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="q2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">日返管理で還付金額が適切に処理される保証は？</button>
-                </h5>
-                <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
-                    <div class="accordion-body">日返管理がお客様より「納税管理人」に選任いただきますが、納税管理人には善管注意義務が課されています。日返管理では、経験豊富な税理士が適切に納税処理を実施した上で、還付の詳細な内訳までご報告いたします。</div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h5 class="accordion-header" id="q3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">既に納税代理人を選任している場合は？</button>
-                </h5>
-                <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
-                    <div class="accordion-body">日返管理がお客様より評価されている理由は、税金の還付にとどまらない総合的なサービスを提供している点です。日返管理では、賃貸管理会社や物件管理会社との連絡、管理費や固定資産税の納入など、非居住者として面倒な業務まで一括で受託しています。ご希望の場合は、日返管理への切り替えまでサポートさせていただきます。</div>
-                </div>
             </div>
         </div>
     </div><br><br><br><br><br>
@@ -258,21 +307,6 @@
 
     <script>
         const data = [
-            {"year":1959,"src":34.1,"rc":20.2,"steel":13.7,"wood":8.7},
-            {"year":1960,"src":30.9,"rc":21.4,"steel":13.4,"wood":9.1},
-            {"year":1961,"src":39.5,"rc":23.9,"steel":14.9,"wood":10.3},
-            {"year":1962,"src":40.9,"rc":27.2,"steel":15.9,"wood":12.2},
-            {"year":1963,"src":41.3,"rc":27.1,"steel":14.6,"wood":13.5},
-            {"year":1964,"src":49.1,"rc":29.5,"steel":16.6,"wood":15.1},
-            {"year":1965,"src":45,"rc":30.3,"steel":17.9,"wood":16.8},
-            {"year":1966,"src":42.4,"rc":30.6,"steel":17.8,"wood":18.2},
-            {"year":1967,"src":43.6,"rc":33.7,"steel":19.6,"wood":19.9},
-            {"year":1968,"src":48.6,"rc":36.2,"steel":21.7,"wood":22.2},
-            {"year":1969,"src":50.9,"rc":39,"steel":23.6,"wood":24.9},
-            {"year":1970,"src":54.3,"rc":42.9,"steel":26.1,"wood":28},
-            {"year":1971,"src":61.2,"rc":47.2,"steel":30.3,"wood":31.2},
-            {"year":1972,"src":61.6,"rc":50.2,"steel":32.4,"wood":34.2},
-            {"year":1973,"src":77.6,"rc":64.3,"steel":42.2,"wood":45.3},
             {"year":1974,"src":113,"rc":90.1,"steel":55.7,"wood":61.8},
             {"year":1975,"src":126.4,"rc":97.4,"steel":60.5,"wood":67.7},
             {"year":1976,"src":114.6,"rc":98.2,"steel":62.1,"wood":70.3},
@@ -325,49 +359,55 @@
         const rent = document.getElementById('rent');
         const area = document.getElementById('area');
         const year = document.getElementById('year');
-        const input = document.querySelectorAll('input');
         const structure = document.getElementById('structure');
+        const select = document.querySelectorAll('select');
         const submit = document.getElementById('submit');
         const est = document.getElementById('est');
-        input.forEach(i => {
-            i.addEventListener('keyup', function() {
+        select.forEach(s => {
+            s.addEventListener('change', function() {
                 let check = true;
-                input.forEach(e => {
+                select.forEach(e => {
                     if (e.value === '') check = false;
-                    else if (isNaN(e.value)) check = false;
                 });
                 if (check) submit.disabled = false;
                 else submit.disabled = true;
             })
         })
         submit.addEventListener('click', function() {
-            const income = Number(rent.value) * 12;
+            const rentValue = Number(rent.value.slice(0, rent.value.length - 2))
+            const areaValue = Number(year.value.slice(0, year.value.length - 1))
+            const yearValue = Number(area.value.slice(0, area.value.length - 2))
+            const income = rentValue * 12;
             const fee = income * 0.055;
             const provision = income * 0.15;
-            const find = data.find(d => d.year === Number(year.value));
-            let multiple = find.steel;
-            let life = 0.025;
-            if (structure.value === 'SRC') {
+            const find = data.find(d => d.year === 2024 - yearValue);
+            let multiple = 0;
+            let life = 0;
+            if (structure.value === 'SRC造') {
                 multiple = find.src;
                 life = 0.015;
-            } else if (structure.value === 'RC') {
+            } else if (structure.value === 'RC造') {
                 multiple = find.rc;
                 life = 0.015;
-            } else if (structure.value === '鉄骨') {
+            } else if (structure.value === '鉄骨造') {
                 multiple = find.steel; 
                 life = 0.025;
             } else if (structure.value === '木造') {
                 multiple = find.wood;
                 life = 0.034;
             }
-            const value = Number(area.value) * multiple * 1000;
+            const value = areaValue * multiple * 1000;
             const depreciation = value * 0.9 * life;
             const tax = 150000;
             const taxable = income - fee - provision - depreciation - tax;
-            const withheld = income * 0.2;
-            const liability = taxable * 0.1;
-            const refund = withheld - liability;
-            const round = Math.round(refund / 10000);
+            let rate = 0;
+            if (taxable < 1000000) rate = 0.1;
+            else if (taxable < 2000000) rate = 0.2;
+            else if (taxable < 3000000) rate = 0.23;
+            const liability = taxable * rate;
+            const withheld = income * 0.2042;
+            const redemption = withheld - liability;
+            const round = Math.round(redemption / 10000);
             est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万円/年';
         });
     </script>
