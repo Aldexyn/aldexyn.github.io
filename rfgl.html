@@ -15,8 +15,9 @@
         <div class="container">
             <a href="#" class="navbar-brand"><img src="image/logo.png" style="height: 40px"></a>
             <div>
-                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">簡體字</a>
-                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">English</a>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">中國</a>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">香港</a>
+                <a href="/eng.html" class="nav-item btn btn-sm btn-secondary">台灣</a>
             </div>
         </div>
     </nav>
@@ -37,37 +38,37 @@
 
     <header style="height: 80vh; background-size: cover; background-position: center; background-image: url(image/hero.jpg);">
         <div class="container" style="padding-top: 40vh">
-            <h1 style="color: white">日本租房沒退過稅？</h1>
-            <h3 style="color: white">平均で家賃の10％以上の還付実績</h3>
-            <h5 style="color: white">華人向けの不動産管理・税務のプロ</h5><br>
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
+            <h1 style="color: white">在日本租房未曾退過税？</h1>
+            <h3 style="color: white">平均可退還房租超過10%！</h3>
+            <h5 style="color: white">華人專屬的房產管理及稅務專家</h5><br>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
         </div>
     </header><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 税金の還付とは？</h3><br>
-        <p>日本の非居住者が日本の不動産を賃貸する場合は、あらかじめ賃料から約20%が源泉徴収されることが一般的ですが、日本の非居住者に日本の税務知識や確定申告の機会がないために、源泉徴収の還付を受けるケースは多くありません。以下では、お客様が弊社のサービスを通して還付可能な金額を計算することができます。</p>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 什麼是房地產退稅金？</h3><br>
+        <p>如果非日本居民在日本出租房產，通常會預先從租金中扣除約20%的稅款。由於非日本居民對日本的稅務知識和申報機會較少，因此成功申請退稅的情況並不多見。以下，您可以透過我們的服務計算可退稅金額。</p>
         <div class="container" style="padding: 10%; background-size: cover; background-position: center; background-image: url(image/simulator.jpg);">
-            <h3 style="color: white;">還付金額シミュレーター</h3><br>
+            <h3 style="color: white;">退稅金額計算機</h3><br>
             <div class="form-floating">
                 <select id="rent" class="form-select">
                     <option></option>
-                    <option>10万円</option>
-                    <option>15万円</option>
-                    <option>20万円</option>
-                    <option>25万円</option>
-                    <option>30万円</option>
-                    <option>35万円</option>
-                    <option>40万円</option>
-                    <option>45万円</option>
-                    <option>50万円</option>
-                    <option>60万円</option>
-                    <option>70万円</option>
-                    <option>80万円</option>
-                    <option>90万円</option>
-                    <option>100万円</option>
+                    <option>10万</option>
+                    <option>15万</option>
+                    <option>20万</option>
+                    <option>25万</option>
+                    <option>30万</option>
+                    <option>35万</option>
+                    <option>40万</option>
+                    <option>45万</option>
+                    <option>50万</option>
+                    <option>60万</option>
+                    <option>70万</option>
+                    <option>80万</option>
+                    <option>90万</option>
+                    <option>100万</option>
                 </select>
-                <label for="rent">家賃（月額）</label>
+                <label for="rent">租金（日幣/月）</label>
                 <br>
             </div>
             <div class="form-floating">
@@ -86,7 +87,7 @@
                     <option>90平米</option>
                     <option>100平米</option>
                 </select>
-                <label for="area">延床面積（平米）</label>
+                <label for="area">建築面積（平米）</label>
                 <br>
             </div>
             <div class="form-floating">
@@ -103,33 +104,33 @@
                     <option>45年</option>
                     <option>50年</option>
                 </select>
-                <label for="year">築年数（年）</label>
+                <label for="year">房齡（年）</label>
                 <br>
             </div>
             <div class="form-floating">
                 <select id="structure" class="form-select">
                     <option></option>
-                    <option>RC造</option>
+                    <option>RC造（一般公寓大樓）</option>
                     <option>木造</option>
                     <option>鉄骨造</option>
                     <option>SRC造</option>
                 </select>
-                <label for="structure">建物構造</label>
+                <label for="structure">建築結構</label>
                 <br>
             </div>
             <div class="d-grid">
-                <button id="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" disabled>試算</button>
+                <button id="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" disabled>計算</button>
             </div>
             <div class="modal fade" id="modal">
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header bg-success">
-                            <h5 class="text-white">還付額の試算</h5>
+                            <h5 class="text-white">退稅金額推算</h5>
                             <button class="btn-close btn-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
                             <h1 id="est" class="text-center text-success" style="font-size: 48px"></h1>
-                            <p>※ 一定の前提のもとに試算しており、実際の還付額とは異なる可能性があります</p>
+                            <p>※ 本試算結果僅供參考，實際退稅金額可能與之不同</p>
                         </div>
                         <div class="modal-footer">
                             <button class="btn btn-success">WeChat</button>
@@ -143,166 +144,166 @@
     </div><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 日房管理の特徴</h3><br>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 日房管理特色</h3><br>
         <div class="card-group">
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white;">
                     <span class="material-symbols-outlined">bolt</span>
-                    着手金なし！
+                    無需預先付任何款項！
                 </div>
                 <div class="card-body">
-                    日房管理は税金の還付金額の中から成功報酬（5万円・税抜）をいただいており、ご相談の着手金や月々の固定税理士報酬などは一切発生しません！
+                    日房管理僅收取退稅金額的成功報酬（5萬日圓，稅前），無需支付諮詢費或月費！
                 </div>
                 <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> ご相談の着手金や固定税理士報酬の発生</p>
+                    <p>＜一般公司服務＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 諮詢時的啟動資金或每月固定的稅務師服務費</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white">
                     <span class="material-symbols-outlined">bolt</span>
-                    資料の準備不要！
+                    無需準備繁複文件資料！
                 </div>
                 <div class="card-body">
-                    賃貸管理費、修繕積立金、固定資産税、減価償却費などの記録は全て日房管理が各業者に照会するため、お客様で準備する必要は一切ありません！
+                    我們將代為向各業者查詢租賃管理費、修繕積立金、固定資產稅、折舊費等相關紀錄，您無需準備任何文件！
                 </div>
                 <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> お客様で収支表を準備して税理士へ開示</p>
+                    <p>＜一般公司服務＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 客戶需自行準備收支表，並提供給稅務師審核</p>
                 </div>
             </div>
             <div class="card">
                 <div class="card-header bg-success" style="font-weight: bold; color: white">
                     <span class="material-symbols-outlined">bolt</span>
-                    中国語で対応！
+                    普通話語言服務！
                 </div>
                 <div class="card-body">
-                    日房管理は日本の税理士と中国語ネイティブスタッフで構成されており、ご相談や還付レポートの作成まで全て中国語で対応させていただきます！
+                    日房管理團隊由日本稅務師和中文母語人士組成，能為您提供從諮詢到退稅報告製作的全方位中文服務！
                 </div>
                 <div class="card-footer">
-                    <p>＜他社の対応＞</p>
-                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 還付レポートが日本語で詳細が不明瞭</p>
+                    <p>＜一般公司服務＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 退稅報告書為日文，內容詳細不清</p>
                 </div>
             </div>
         </div><br>
         <div class="d-grid">
-            <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
+            <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
         </div>
     </div><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> ワンストップサービス</h3><br>
-        <p>日房管理は一般的な税理士事務所とは異なります。数多くの海外のお客様とお取引する中で、日本への不動産投資に関わる「負」を解消するために以下の不動産管理サービスを確立してきました。日房管理にお任せいただければ、もうお客様が複数の業者と連絡を取り合う必要はありません</p>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 一站式服務</h3><br>
+        <p>日房管理與一般的稅務事務所不同。我們累積了與眾多海外客戶合作的經驗，為了解決您在日本投資房產所面臨的問題，建立了以下的房產管理服務。選擇日房管理，您將無需再與多家業者聯繫。</p>
         <div class="accordion" id="accordion">
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q1">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">必要経費の納入代行</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">必要経費的納入代行</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
                     <div class="accordion-body">
                         <h5 class="text-danger">
                             <span class="material-symbols-outlined text-danger">warning</span>
-                            わざわざ管理費や固定資産税を海外送金していませんか？
+                            您是否還在為支付管理費、固定資產稅而煩惱海外匯款？
                         </h5>
-                        <p>日房管理では還付金額をそのままお客様に送金するだけでなく、私たちでお預かりすることで将来の管理費や固定資産税に充当する納入代行サービスも提供しております。お客様ご自身での海外送金の手間を省けるだけでなく、海外送金手数料も不要になる便利なサービスです</p>
+                        <p>日房管理不僅將退稅款直接匯入您的帳戶，更提供代為繳納管理費、固定資產稅等費用服務。這項服務不僅能省去您繁瑣的海外匯款手續，還能節省匯款手續費。</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q2">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">内装のアップグレード</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">内装升級</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
                     <div class="accordion-body">
                         <h5 class="text-danger">
                             <span class="material-symbols-outlined text-danger">warning</span>
-                            賃貸不動産を買ったままで放置していませんか？
+                            您是否讓出租的房產閒置不管？
                         </h5>
-                        <p>賃貸不動産は経年劣化により、空室の期間が長くなるリスクや賃料減額交渉のリスクが生まれます。日房管理では賃貸管理会社にリノベーションを依頼するよりもお手頃な価格で、お客様のお部屋をリノベーションして賃貸利回りを高めるご提案が可能です</p>
+                        <p>隨著時間推移，房屋老化，空置期延長或租金下調的風險也會增加。日房管理能以比一般租賃管理公司更優惠的價格，為您翻新房屋，提升租金收益。</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q3">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">不動産売買の仲介</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">管理組合員的議長代行</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
                     <div class="accordion-body">
                         <h5 class="text-danger">
                             <span class="material-symbols-outlined text-danger">warning</span>
-                            仲介業者の言いなりで専属専任契約を結んでいませんか？
+                            您能定期參加管理委員會的會議嗎？
                         </h5>
-                        <p>一般的に仲介業者は「専属専任契約」を締結して、他の仲介業者との競争を避けようとする傾向があります。競争がなくなると、低い価格でも成約を促すようになり、売り手にとって不利な状況に陥る可能性があります。日房管理では複数の提携仲介業者と窓口を持つことで、お客様の不動産の賃貸状況や相場状況と照らし合わせながら、理想的な価格での売却が可能になります</p>
+                        <p>在日本，持有公寓的業主需要定期參加管理委員會會議，並可能被選為委員長。如果您無法親自出席，將會被處以罰款。日房管理可以代為出席會議，並擔任委員長。</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q4">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">不動産投資案件の紹介</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">不動産買賣仲介</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a4" aria-labelledyby="q4" data-bs-parent="#accordion">
                     <div class="accordion-body">
                         <h5 class="text-danger">
                             <span class="material-symbols-outlined text-danger">warning</span>
-                            日本の不動産投資案件をお探しですか？
+                            您是否被仲介公司強迫簽訂獨家委託契約？
                         </h5>
-                        <p>日本の不動産市場の相場上昇により、海外から日本の不動産への投資熱が上がっています。日房管理では提携不動産仲介業者から新鮮な不動産情報を仕入れており、定期的にお客様へ投資案件をご紹介しております</p>
+                        <p>通常，仲介公司為了避免競爭，會要求簽訂獨家委託契約，這可能導致房屋以低於市場價成交。日房管理與多家仲介公司合作，能根據您的房屋狀況和市場行情，為您找到最佳的買家。</p>
                     </div>
                 </div>
             </div>
             <div class="accordion-item">
                 <h5 class="accordion-header" id="q5">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">管理組合員の議長代行</button>
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">不動産投資案件介紹</button>
                 </h5>
                 <div class="accordion-collapse collapse" id="a5" aria-labelledyby="q5" data-bs-parent="#accordion">
                     <div class="accordion-body">
                         <h5 class="text-danger">
                             <span class="material-symbols-outlined text-danger">warning</span>
-                            管理組合に参加できていますか？
+                            您正在尋找日本的投資房產嗎？
                         </h5>
-                        <p>日本のマンションの一室を保有すると、数ヶ月に一度は管理組合に参加する義務があり、かつ数年に一度の輪番で議長に任命されることがあります。もしお客様が日本にいないために議長を務めることができない場合は、「協力金」というペナルティが課されますますが、日房管理はお客様の代わりに議長役を引き受けることが可能です</p>
+                        <p>隨著日本房地產市場的升溫，越來越多的海外投資者將目光投向日本。日房管理與多家房地產仲介公司合作，能為您提供最新的投資房產資訊。</p>
                     </div>
                 </div>
             </div><br>
             <div class="d-grid">
-                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
+                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
             </div>    
         </div>
     </div><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> ご利用の流れ</h3><br>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 服務流程</h3><br>
         <div class="card-group">
             <div class="card">
-                <div class="card-header bg-dark" style="font-weight: bold; color: white;"> 1. 無料相談</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white;"> 1. 免費諮詢</div>
                 <img src="image/consultation.jpg" class="card-img-body">
                 <div class="card-body">
-                    微信/WhatsApp/LINEでお問い合わせいただくと、日房管理の中国語ネイティブスタッフがサービス内容をご紹介いたします。契約締結前は個人情報をお聞きしないのでご安心ください
+                    您可以透過微信/WhatsApp/LINE聯繫我們，我們的中文客服會為您詳細介紹服務內容。在簽訂合約前，我們不會索取您的個人資訊，請您放心。
                 </div>
             </div>
             <div class="card">
-                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 納税管理人の選任手続き</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 委任稅務代理人</div>
                 <img src="image/signature.jpg" class="card-img-body">
                 <div class="card-body">
-                    お客様は日房管理を納税管理人に選任するだけ。還付申請に必要な書類は日房管理が賃貸管理会社及び管理会社に照会するため、お客様が昔の資料を掘り起こす必要はありません
+                    您只需將日房管理指定為您的稅務代理人。所需的文件我們將代為向租賃管理公司和物業管理公司查詢，您無需自行準備過往資料。
                 </div>
             </div>
             <div class="card">
-                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 税金の還付金の送金</div>
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 退稅款項匯款</div>
                 <img src="image/bonus.jpg" class="card-img-body">
                 <div class="card-body">
-                    契約から2ヶ月以内を目安に還付金額をお客様の海外銀行口座宛に送金いたします。なお、将来の管理費や固定資産税の納入のため、還付金の一部を日房管理でお預かりすることも可能です
+                    我們將在簽約後兩個月內將退稅款匯入您的海外銀行帳戶。如您同意，我們可以代為支付您未來房屋的管理費和固定資產稅。
                 </div>
                 </div>
             </div><br>
             <div class="d-grid">
-                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">無料相談（前金・個人情報不要）</button>
+                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
             </div>
         </div>
     </div><br><br><br><br><br>
 
     <div class="container">
-        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> お客様の声</h3><br>
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 客戶評價</h3><br>
         <div class="card-group">
             <div class="card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#voice1">
                 <img src="image/voice1.jpg" class="card-img-top">
@@ -316,22 +317,22 @@
                             </div>
                             <div class="modal-body">
                                 <img src="image/voice1.jpg" style="width: 100%; margin-bottom: 30px">
-                                <h5>Q. 日房管理のサービスをご利用のきっかけは？</h5>
-                                <p>A. 2018年に東京都のマンションの一室を購入したが、私自身は台湾に住んでいるため、5年近く日本人へ賃貸していた。賃貸管理会社S社に賃貸管理を任せていたが、つい最近まで賃料収入から源泉徴収されていること、そしてその半分近くが還付請求できることを知らなかった。日房管理のサービスを使っている友人からサービスの概要を聞き、すぐにサービスの利用を決めた。</p>
+                                <h5>Q. 您當初選擇使用日房管理服務的原因是什麼？</h5>
+                                <p>A. 我於2018年在東京都購買了一間公寓，由於我本人居住在台灣，因此將其出租給日本人已有近5年。之前一直委託S租賃管理公司進行管理，直到最近才知道租金收入被源泉扣繳了稅款，而且其中近一半的款項可以申請退稅。聽了使用過日房管理服務的朋友的介紹，我立刻決定使用他們的服務。</p>
                                 <br>
-                                <h5>Q. 日房管理のサービスの魅力は？</h5>
-                                <p>A. 私は日本語が少しも話せないので、全て中国語で対応いただけることに一番満足している。私が経営する会社名義で不動産を購入しているので、毎年の賃貸収入や経費について中国語でレポートが発行されることで、会計チームへの負担が少なくなったと感じる。</p>
-                                <p>さらに、日房管理のサービスを使用するまでは、賃貸会社から管理組合まで日本人から日本語のメールを受け取っていて、テナントとの連絡取次で苦労していた。今は日房管理の担当者に全ての連絡を代行していただいており、日本の不動産管理における負担が大きく減った。</p>
+                                <h5>Q. 您覺得日房管理服務最大的優勢是什麼？</h5>
+                                <p>A. 我完全不會說日語，因此能夠全程使用中文服務讓我非常滿意。由於我用公司名義購買的房產，每年都會收到用中文撰寫的租金收入和支出報告，這大大減輕了會計團隊的工作負擔。</p>
+                                <p>此外，在使用日房管理服務之前，我需要處理來自租賃公司和管理委員會的日文郵件，在與租戶溝通方面遇到了很多困難。現在，日房管理的工作人員會代我處理所有聯繫，大大減輕了我管理日本房產的負擔。</p>
                                 <br>
-                                <h5>Q. 税金還付以外のサービスをご利用ですか？</h5>
-                                <p>A. 管理費や固定資産税の納付には頭を抱えていて、定期的に台湾の銀行で海外送金の手続きをしていた。現在は日房管理からの還付金をそれらの支払いに充当しており、海外送金のことを考える必要がなくなった。</p>
-                                <p>また、マンションの区分所有者として管理組合の集会への参加が義務付けられていることも知らなかった。これまでに議長に任命されたが、任命の事実すら知らずに、ペナルティを請求されたことがあったので、これからは日房管理が管理組合への対応までしてくれることになり安心している。</p>
+                                <h5>Q. 您是否使用了日房管理的其他服務？</h5>
+                                <p>A. 我之前一直為支付管理費和固定資產稅而煩惱，需要定期從台灣的銀行進行海外匯款。現在，我可以直接用日房管理退還的稅款支付這些費用，無需再擔心海外匯款的問題。</p>
+                                <p>此外，我還不知道作為公寓的所有者，必須參加管理委員會的會議。之前曾被任命為委員長，但毫不知情，因此被罰款。現在，日房管理可以代我處理管理委員會的事務，我感到非常安心。</p>
                                 <br>
-                                <h5>Q. 日房管理のご利用をお勧めしますか？</h5>
-                                <p>非常にお勧めする。日本の税理士事務所と料金も変わらないのに、税金の還付以外のサービスまで提供しているのは日房管理だけではないか。正直、不動産投資は売却益に期待していて、保有中の賃貸管理にはあまり関心がないので、それら管理業務をワンストップサービスで引き受けてくれる日房管理のサービスはとても重宝している。</p>
+                                <h5>Q. 您會推薦日房管理的服務嗎？</h5>
+                                <p>A. 我強烈推薦。日房管理提供的服務不僅僅是退稅，還包括其他多方面的管理服務，而且費用與日本的稅務事務所相當。坦白說，我投資房產主要是為了獲取出售時的收益，對於出租管理並沒有太大的興趣。日房管理能夠提供一站式的管理服務，這對我來說非常方便。</p>
                             </div>
                             <div class="modal-footer">
-                                <button class="btn btn-secondary">閉じる</button>
+                                <button class="btn btn-secondary">關閉</button>
                             </div>
                         </div>
                     </div>
@@ -354,10 +355,9 @@
             <div class="col-sm-6">
                 <h3>日房管理合同会社</h3>
                 <br>
-                <h5>「日本の不動産投資をもっとオープンに」</h5>
+                <h5>「讓日本的房地產投資更簡單」</h5>
                 <br>
-                <p>会社情報</p>
-                <p>事業：海外居住者向け不動産管理業務</p>
+                <p>事業：專門為海外人士提供日本房地產管理服務</p>
                 <p>設立：2024年7月</p>
                 <p>資本金：1,000,000円</p>
                 <p>代表者：佐藤　隆太朗</p>
@@ -441,9 +441,9 @@
             })
         })
         submit.addEventListener('click', function() {
-            const rentValue = Number(rent.value.slice(0, rent.value.length - 2))
-            const areaValue = Number(year.value.slice(0, year.value.length - 1))
-            const yearValue = Number(area.value.slice(0, area.value.length - 2))
+            const rentValue = Number(rent.value.slice(0, rent.value.length - 1)) * 10000;
+            const areaValue = Number(area.value.slice(0, area.value.length - 2));
+            const yearValue = Number(year.value.slice(0, year.value.length - 1));
             const income = rentValue * 12;
             const fee = income * 0.055;
             const provision = income * 0.15;
@@ -453,7 +453,7 @@
             if (structure.value === 'SRC造') {
                 multiple = find.src;
                 life = 0.015;
-            } else if (structure.value === 'RC造') {
+            } else if (structure.value === 'RC造（一般公寓大樓）') {
                 multiple = find.rc;
                 life = 0.015;
             } else if (structure.value === '鉄骨造') {
@@ -467,15 +467,18 @@
             const depreciation = value * 0.9 * life;
             const tax = 150000;
             const taxable = income - fee - provision - depreciation - tax;
-            let rate = 0;
-            if (taxable < 1000000) rate = 0.1;
-            else if (taxable < 2000000) rate = 0.2;
-            else if (taxable < 3000000) rate = 0.23;
-            const liability = taxable * rate;
+            let liability = 0;
+            if (taxable < 1950000) liability = taxable * 0.05;
+            else if (taxable < 3300000) liability = taxable * 0.1 - 97500;
+            else if (taxable < 6950000) liability = taxable * 0.2 - 427500;
+            else if (taxable < 9000000) liability = taxable * 0.23 - 636000;
+            else if (taxable < 18000000) liability = taxable * 0.33 - 1536000;
+            else if (taxable < 40000000) liability = taxable * 0.4 - 2796000;
+            else liability = taxable * 0.45 - 4796000;
             const withheld = income * 0.2042;
             const redemption = withheld - liability;
             const round = Math.round(redemption / 10000);
-            est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万円/年';
+            est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万日幣/年';
         });
     </script>
 
