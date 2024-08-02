@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel=”icon” href=“image/favicon.ico”>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>span { transform: translateY(6px) }</style>
+    <title>日房管理</title>
+</head>
+<body class="bg-light">
+
+    <nav class="navbar navbar-expand">
+        <div class="container">
+            <div>
+                <a href="#" class="navbar-brand"><img src="image/rf.png" style="height: 50px"></a>
+            </div>
+            <div>
+                <a href="/ch.html" class="nav-item btn btn-sm btn-secondary">中國</a>
+                <a href="/hk.html" class="nav-item btn btn-sm btn-secondary">香港</a>
+                <a href="/tw.html" class="nav-item btn btn-sm btn-secondary">台灣</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="modal fade" id="contact">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="d-grid">
+                        <button class="btn btn-success">微信</button><br>
+                        <button class="btn btn-success">WhatsApp</button><br>
+                        <button class="btn btn-success">LINE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header style="height: 80vh; background-size: cover; background-position: center; background-image: url(image/hero.jpg);">
+        <div class="container" style="padding-top: 50vh">
+            <h1 style="color: white">日本房子未曾退過税？</h1>
+            <h3 style="color: white">只要出租過的都能夠退稅！</h3><br>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
+        </div>
+    </header><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 什麼是房地產退稅金？</h3><br>
+        <p>如果非日本居民在日本出租房產，通常會預先從租金中扣除約20%的稅款。由於非日本居民對日本的稅務知識和申報機會較少，因此成功申請退稅的情況並不多見。以下，您可以計算透過我們的服務可退稅金額。</p>
+        <div class="container" style="padding: 10%; background-size: cover; background-position: center; background-image: url(image/simulator.jpg);">
+            <h3 style="color: white;">退稅金額計算機</h3><br>
+            <div class="form-floating">
+                <select id="rent" class="form-select">
+                    <option></option>
+                    <option>10万</option>
+                    <option>15万</option>
+                    <option>20万</option>
+                    <option>25万</option>
+                    <option>30万</option>
+                    <option>35万</option>
+                    <option>40万</option>
+                    <option>45万</option>
+                    <option>50万</option>
+                    <option>60万</option>
+                    <option>70万</option>
+                    <option>80万</option>
+                    <option>90万</option>
+                    <option>100万</option>
+                </select>
+                <label for="rent">租金（日幣/月）</label>
+                <br>
+            </div>
+            <div class="form-floating">
+                <select id="area" class="form-select">
+                    <option></option>
+                    <option>20平米</option>
+                    <option>25平米</option>
+                    <option>30平米</option>
+                    <option>35平米</option>
+                    <option>40平米</option>
+                    <option>45平米</option>
+                    <option>50平米</option>
+                    <option>60平米</option>
+                    <option>70平米</option>
+                    <option>80平米</option>
+                    <option>90平米</option>
+                    <option>100平米</option>
+                </select>
+                <label for="area">建築面積（平米）</label>
+                <br>
+            </div>
+            <div class="form-floating">
+                <select id="year" class="form-select">
+                    <option></option>
+                    <option>5年</option>
+                    <option>10年</option>
+                    <option>15年</option>
+                    <option>20年</option>
+                    <option>25年</option>
+                    <option>30年</option>
+                    <option>35年</option>
+                    <option>40年</option>
+                    <option>45年</option>
+                    <option>50年</option>
+                </select>
+                <label for="year">房齡（年）</label>
+                <br>
+            </div>
+            <div class="form-floating">
+                <select id="structure" class="form-select">
+                    <option></option>
+                    <option>RC造（一般公寓大樓）</option>
+                    <option>木造</option>
+                    <option>鉄骨造</option>
+                    <option>SRC造</option>
+                </select>
+                <label for="structure">建築結構</label>
+                <br>
+            </div>
+            <div class="d-grid">
+                <button id="submit" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal" disabled>計算</button>
+            </div>
+            <div class="modal fade" id="modal">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header bg-success">
+                            <h5 class="text-white">退稅金額</h5>
+                            <button class="btn-close btn-white" data-bs-dismiss="modal"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h1 id="est" class="text-center text-success" style="font-size: 48px"></h1>
+                            <p>※ 本試算結果僅供參考，實際退稅金額可能與之不同</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button class="btn btn-success">WeChat</button>
+                            <button class="btn btn-success">WhatsApp</button>
+                            <button class="btn btn-success">LINE</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 日房管理特色</h3><br>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white;">
+                    <span class="material-symbols-outlined">bolt</span>
+                    無需預先付任何款項！
+                </div>
+                <div class="card-body">
+                    日房管理僅收取退稅金額的成功報酬，無需支付諮詢費或月費！
+                </div>
+                <div class="card-footer">
+                    <p>＜一般公司服務＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 諮詢時的啟動資金或每月固定的稅務師服務費</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white">
+                    <span class="material-symbols-outlined">bolt</span>
+                    無需準備繁複文件資料！
+                </div>
+                <div class="card-body">
+                    我們將代為向各業者查詢相關紀錄，您無需準備任何文件！
+                </div>
+                <div class="card-footer">
+                    <p>＜一般公司服務＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 客戶需自行準備收支表，並提供給稅務師審核</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-success" style="font-weight: bold; color: white">
+                    <span class="material-symbols-outlined">bolt</span>
+                    無需日文，全程中文服務！
+                </div>
+                <div class="card-body">
+                    日房管理團隊由日本稅務師和中文母語人士組成，能為您提供全方位中文服務！
+                </div>
+                <div class="card-footer">
+                    <p>＜一般公司服務＞</p>
+                    <p><span class="material-symbols-outlined" style="color: red;">cancel</span> 退稅報告書為日文，內容詳細不清</p>
+                </div>
+            </div>
+        </div><br>
+        <div class="d-grid">
+            <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 一站式服務</h3><br>
+        <p>日房管理與一般的稅務事務所不同。我們累積了與眾多海外客戶合作的經驗，為了解決您在日本投資房產所面臨的問題，建立了以下的房產管理服務。選擇日房管理，您將無需再與多家業者聯繫。</p>
+        <div class="accordion" id="accordion">
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">物業費代繳</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a1" aria-labelledyby="q1" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <h5 class="text-danger">
+                            <span class="material-symbols-outlined text-danger">warning</span>
+                            您是否還在為支付管理費、固定資產稅而煩惱海外匯款？
+                        </h5>
+                        <p>日房管理不僅將退稅款直接匯入您的帳戶，更提供代為繳納管理費、固定資產稅等費用服務。這項服務不僅能省去您繁瑣的海外匯款手續，還能節省匯款手續費。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">房屋精美裝修</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a2" aria-labelledyby="q2" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <h5 class="text-danger">
+                            <span class="material-symbols-outlined text-danger">warning</span>
+                            您是否讓出租的房產閒置不管？
+                        </h5>
+                        <p>隨著時間推移，房屋老化，空置期延長或租金下調的風險也會增加。日房管理能以比一般裝修公司更優惠的價格，為您翻新房屋，提升租金收益。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">物業管理委員會代行</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a3" aria-labelledyby="q3" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <h5 class="text-danger">
+                            <span class="material-symbols-outlined text-danger">warning</span>
+                            您參加過物業管理委員會的會議嗎？
+                        </h5>
+                        <p>在日本，持有公寓的業主需要定期參加管理委員會會議，並可能被選為委員長。如果您無法親自出席，將會被處以罰款。日房管理可以代為出席會議，並擔任委員長。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">房地產買賣仲介</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a4" aria-labelledyby="q4" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <h5 class="text-danger">
+                            <span class="material-symbols-outlined text-danger">warning</span>
+                            您是否被仲介公司強迫簽訂獨家委託契約？
+                        </h5>
+                        <p>通常，仲介公司為了避免競爭，會要求簽訂獨家委託契約，這可能導致房屋以低於市場價成交。日房管理與多家仲介公司合作，能根據您的房屋狀況和市場行情，為您找到最佳的買家。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h5 class="accordion-header" id="q5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">房地產投資案件介紹</button>
+                </h5>
+                <div class="accordion-collapse collapse" id="a5" aria-labelledyby="q5" data-bs-parent="#accordion">
+                    <div class="accordion-body">
+                        <h5 class="text-danger">
+                            <span class="material-symbols-outlined text-danger">warning</span>
+                            您正在尋找日本的投資房產嗎？
+                        </h5>
+                        <p>隨著日本房地產市場的升溫，越來越多的海外投資者將目光投向日本。日房管理與多家房地產仲介公司合作，能為您提供最新的投資房產資訊。</p>
+                    </div>
+                </div>
+            </div><br>
+            <div class="d-grid">
+                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
+            </div>    
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 服務流程</h3><br>
+        <div class="card-group">
+            <div class="card">
+                <div class="card-header bg-dark" style="font-weight: bold; color: white;"> 1. 免費諮詢</div>
+                <img src="image/consultation.jpg" class="card-img-body">
+                <div class="card-body">
+                    您可以透過微信/WhatsApp/LINE聯繫我們，我們的中文客服會為您詳細介紹服務內容。在簽訂合約前，我們不會索取您的個人資訊，請您放心。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 2. 委任稅務代理人</div>
+                <img src="image/signature.jpg" class="card-img-body">
+                <div class="card-body">
+                    您只需將日房管理指定為您的稅務代理人。所需的文件我們將代為向租賃管理公司和物業管理公司查詢，您無需自行準備過往資料。
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header bg-dark" style="font-weight: bold; color: white"> 3. 退稅款項匯款</div>
+                <img src="image/bonus.jpg" class="card-img-body">
+                <div class="card-body">
+                    我們將在簽約後兩個月內將退稅款匯入您的海外銀行帳戶。如您同意，我們可以代為支付您未來房屋的管理費和固定資產稅。
+                </div>
+                </div>
+            </div><br>
+            <div class="d-grid">
+                <button class="btn btn-primary"  data-bs-toggle="modal" data-bs-target="#contact">免費諮詢（無需提供個人信息）</button>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 客戶評價</h3><br>
+        <div class="card-group">
+            <div class="card" style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#voice1">
+                <img src="image/voice1.jpg" class="card-img-top">
+                <div class="card-body">郭先生（台灣）</div>
+                <div class="modal fade" id="voice1">
+                    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5>郭先生（台灣）</h5>
+                                <button class="btn-close btn-white" data-bs-dismiss="modal"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="image/voice1.jpg" style="width: 100%; margin-bottom: 30px">
+                                <h5>Q. 您透過我們的服務每年獲得多少退稅呢？</h5>
+                                <p>A. 我那間月租24萬的房子，算一算一年差不多可以退45萬稅。</p>
+                                <br>
+                                <h5>Q. 您當初選擇使用日房管理服務的原因是什麼？</h5>
+                                <p>A. 我2018年在東京買了一間公寓，自己住台灣，就一直租給日本人。之前找了一家租賃公司管理，最近才知道租金被扣稅了。聽朋友介紹了日房管理，就馬上換了。</p>
+                                <br>
+                                <h5>Q. 您覺得日房管理服務最大的優勢是什麼？</h5>
+                                <p>A. 我完全不會講日文，他們能全程用中文服務很棒的！而且我用公司名義買房，每年都會收到中文的租金收入支出報告，會計那邊很感謝的。之前要回一堆日文信，跟房客溝通很麻煩。現在日房管理都幫我處理好了，輕鬆很多。</p>
+                                <br>
+                                <h5>Q. 您是否使用了日房管理的其他服務？</h5>
+                                <p>A. 有啊，我之前為了繳管理費和固定資產稅，一直要從台灣匯錢過去，很麻煩的。現在用退稅的錢直接付就好，不用再煩惱匯款問題了。還有，我根本不知道公寓的住戶要參加管理委員會，之前還被選為委員長，結果不知道被罰錢了。現在日房管理幫我處理委員會的事，我很安心。</p>
+                                <br>
+                                <h5>Q. 您會推薦日房管理的服務嗎？</h5>
+                                <p>A. 我很推薦的！不只退稅，其他管理方面也幫我處理得很好，而且費用跟日本的稅務事務所差不多。說真的，我買房主要是為了以後賣掉賺錢，不太想管出租的事。日房管理能一次幫我處理好，很方便的。</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button class="btn btn-secondary">關閉</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card" data-bs-toggle="modal" data-bs-target="#voice2">
+                <img src="image/tbu.png" class="card-img-top">
+                <div class="card-body"></div>
+            </div>
+            <div class="card" data-bs-toggle="modal" data-bs-target="#voice3">
+                <img src="image/tbu.png" class="card-img-top">
+                <div class="card-body"></div>
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <div class="container">
+        <h3><span class="material-symbols-outlined" style="color: green; font-size: 30px">check_box</span> 公司介紹</h3><br>
+        <div class="row">
+            <div class="col-sm-6">
+                <h3>日房管理合同会社</h3>
+                <p>RIFANG MANAGEMENT Ltd.</p>
+                <p>〒162-0805 東京都新宿区矢来町27-2</p>
+                <br>
+                <h5>「讓日本的房地產投資更簡單！」</h5>
+                <p>專門為海外人士提供日本房地產管理服務</p>
+            </div>
+            <div class="col-sm-6">
+                <img src="image/team.jpg" style="width: 100%">
+            </div>
+        </div>
+    </div><br><br><br><br><br>
+
+    <footer class="bg-dark" style="padding: 100px 0;">
+        <div class="container">
+            <div class="text-center">
+                <img src="image/logo-white.png" style="height: 10vh;">
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const data = [
+            {"year":1974,"src":113,"rc":90.1,"steel":55.7,"wood":61.8},
+            {"year":1975,"src":126.4,"rc":97.4,"steel":60.5,"wood":67.7},
+            {"year":1976,"src":114.6,"rc":98.2,"steel":62.1,"wood":70.3},
+            {"year":1977,"src":121.8,"rc":102,"steel":65.3,"wood":74.1},
+            {"year":1978,"src":122.4,"rc":105.9,"steel":70.1,"wood":77.9},
+            {"year":1979,"src":128.9,"rc":114.3,"steel":75.4,"wood":82.5},
+            {"year":1980,"src":149.4,"rc":129.7,"steel":84.1,"wood":92.5},
+            {"year":1981,"src":161.8,"rc":138.7,"steel":91.7,"wood":98.3},
+            {"year":1982,"src":170.9,"rc":143,"steel":93.9,"wood":101.3},
+            {"year":1983,"src":168,"rc":143.8,"steel":94.3,"wood":102.2},
+            {"year":1984,"src":161.2,"rc":141.7,"steel":95.3,"wood":102.8},
+            {"year":1985,"src":172.2,"rc":144.5,"steel":96.9,"wood":104.2},
+            {"year":1986,"src":181.9,"rc":149.5,"steel":102.6,"wood":106.2},
+            {"year":1987,"src":191.8,"rc":156.6,"steel":108.4,"wood":110},
+            {"year":1988,"src":203.6,"rc":175,"steel":117.3,"wood":116.5},
+            {"year":1989,"src":237.3,"rc":193.3,"steel":128.4,"wood":123.1},
+            {"year":1990,"src":286.7,"rc":222.9,"steel":147.4,"wood":131.7},
+            {"year":1991,"src":329.8,"rc":246.8,"steel":158.7,"wood":137.6},
+            {"year":1992,"src":333.7,"rc":245.6,"steel":162.4,"wood":143.5},
+            {"year":1993,"src":300.3,"rc":227.5,"steel":159.2,"wood":150.9},
+            {"year":1994,"src":262.9,"rc":212.8,"steel":148.4,"wood":156.6},
+            {"year":1995,"src":228.8,"rc":199,"steel":143.2,"wood":158.3},
+            {"year":1996,"src":229.7,"rc":198,"steel":143.6,"wood":161},
+            {"year":1997,"src":223,"rc":201,"steel":141,"wood":160.5},
+            {"year":1998,"src":225.6,"rc":203.8,"steel":138.7,"wood":158.6},
+            {"year":1999,"src":220.9,"rc":197.9,"steel":139.4,"wood":159.3},
+            {"year":2000,"src":204.3,"rc":182.6,"steel":132.3,"wood":159},
+            {"year":2001,"src":186.1,"rc":177.8,"steel":136.4,"wood":157.2},
+            {"year":2002,"src":195.2,"rc":180.5,"steel":135,"wood":153.6},
+            {"year":2003,"src":187.3,"rc":179.5,"steel":131.4,"wood":152.7},
+            {"year":2004,"src":190.1,"rc":176.1,"steel":130.6,"wood":152.1},
+            {"year":2005,"src":185.7,"rc":171.5,"steel":132.8,"wood":151.9},
+            {"year":2006,"src":170.5,"rc":178.6,"steel":133.7,"wood":152.9},
+            {"year":2007,"src":182.5,"rc":185.8,"steel":135.6,"wood":153.6},
+            {"year":2008,"src":229.1,"rc":206.1,"steel":158.3,"wood":156},
+            {"year":2009,"src":265.2,"rc":219,"steel":169.5,"wood":156.6},
+            {"year":2010,"src":226.4,"rc":205.9,"steel":163,"wood":156.5},
+            {"year":2011,"src":238.4,"rc":197,"steel":158.9,"wood":156.8},
+            {"year":2012,"src":223.3,"rc":193.9,"steel":155.6,"wood":157.6},
+            {"year":2013,"src":258.5,"rc":203.8,"steel":164.3,"wood":159.9},
+            {"year":2014,"src":276.2,"rc":228,"steel":176.4,"wood":163},
+            {"year":2015,"src":262.2,"rc":240.2,"steel":197.3,"wood":165.4},
+            {"year":2016,"src":308.3,"rc":254.2,"steel":204.1,"wood":165.9},
+            {"year":2017,"src":350.4,"rc":265.5,"steel":214.6,"wood":166.7},
+            {"year":2018,"src":304.2,"rc":263.1,"steel":214.1,"wood":168.5},
+            {"year":2019,"src":363.3,"rc":285.6,"steel":228.8,"wood":170.1},
+            {"year":2020,"src":279.2,"rc":276.9,"steel":230.2,"wood":172},
+            {"year":2021,"src":338.4,"rc":288.2,"steel":227.3,"wood":172.2}
+        ];
+        const rent = document.getElementById('rent');
+        const area = document.getElementById('area');
+        const year = document.getElementById('year');
+        const structure = document.getElementById('structure');
+        const select = document.querySelectorAll('select');
+        const submit = document.getElementById('submit');
+        const est = document.getElementById('est');
+        select.forEach(s => {
+            s.addEventListener('change', function() {
+                let check = true;
+                select.forEach(e => {
+                    if (e.value === '') check = false;
+                });
+                if (check) submit.disabled = false;
+                else submit.disabled = true;
+            })
+        })
+        submit.addEventListener('click', function() {
+            const rentValue = Number(rent.value.slice(0, rent.value.length - 1)) * 10000;
+            const areaValue = Number(area.value.slice(0, area.value.length - 2));
+            const yearValue = Number(year.value.slice(0, year.value.length - 1));
+            const income = rentValue * 12;
+            const fee = income * 0.055;
+            const provision = income * 0.15;
+            const find = data.find(d => d.year === 2024 - yearValue);
+            let multiple = 0;
+            let life = 0;
+            if (structure.value === 'SRC造') {
+                multiple = find.src;
+                life = 0.015;
+            } else if (structure.value === 'RC造（一般公寓大樓）') {
+                multiple = find.rc;
+                life = 0.015;
+            } else if (structure.value === '鉄骨造') {
+                multiple = find.steel; 
+                life = 0.025;
+            } else if (structure.value === '木造') {
+                multiple = find.wood;
+                life = 0.034;
+            }
+            const value = areaValue * multiple * 1000;
+            const depreciation = value * 0.9 * life;
+            const tax = 150000;
+            const taxable = income - fee - provision - depreciation - tax;
+            let liability = 0;
+            if (taxable < 1950000) liability = taxable * 0.05;
+            else if (taxable < 3300000) liability = taxable * 0.1 - 97500;
+            else if (taxable < 6950000) liability = taxable * 0.2 - 427500;
+            else if (taxable < 9000000) liability = taxable * 0.23 - 636000;
+            else if (taxable < 18000000) liability = taxable * 0.33 - 1536000;
+            else if (taxable < 40000000) liability = taxable * 0.4 - 2796000;
+            else liability = taxable * 0.45 - 4796000;
+            const withheld = income * 0.2042;
+            const redemption = withheld - liability;
+            const round = Math.round(redemption / 10000);
+            est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万日幣/年';
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
