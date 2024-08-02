@@ -126,7 +126,7 @@
                 <div class="modal-dialog modal-dialog-centered">
                     <div class="modal-content">
                         <div class="modal-header bg-success">
-                            <h5 class="text-white">退稅金額</h5>
+                            <h5 class="text-white">退稅金額(年)</h5>
                             <button class="btn-close btn-white" data-bs-dismiss="modal"></button>
                         </div>
                         <div class="modal-body">
@@ -468,9 +468,9 @@
                 life = 0.034;
             }
             const value = areaValue * multiple * 1000;
-            const depreciation = value * 0.9 * life;
-            const tax = 150000;
-            const taxable = income - fee - provision - depreciation - tax;
+            const dep = value * 0.9 * life;
+            const tax = income / 12 * 0.5;
+            const taxable = income - fee - provision - dep - tax;
             let liability = 0;
             if (taxable < 1950000) liability = taxable * 0.05;
             else if (taxable < 3300000) liability = taxable * 0.1 - 97500;
@@ -482,7 +482,12 @@
             const withheld = income * 0.2042;
             const redemption = withheld - liability;
             const round = Math.round(redemption / 10000);
-            est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万日幣/年';
+            console.log(taxable)
+            console.log(liability)
+            console.log(withheld)
+            console.log(redemption)
+            console.log(round)
+            est.innerHTML = '<span class="material-symbols-outlined text-success">currency_yen</span> ' + round + '万日幣';
         });
     </script>
 
