@@ -8,14 +8,15 @@
 </head>
 <body>
     <p id="result"></p>
+    <p id="err"></p>
     <script>
         liff.init({ liffId: "2007179414-EXGKgBm1"}).then(() => {
             liff.scanCode().then(result => {
                 document.getElementById('result').textContent = result;
             }).catch(err => {
-                console.error(err);
+                document.getElementById('err').textContet = err;
             }).catch(err => {
-                console.error(err);
+                document.getElementById('err').textContet = err;
             })
         })
     </script>
