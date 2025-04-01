@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://static.line-scdn.net/liff/2.1/sdk.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <p id="result"></p>
+    <script>
+        liff.init({ liffId: "2007179414-EXGKgBm1"}).then(() => {
+            liff.scanCode().then(result => {
+                document.getElementById('result').textContent = result;
+            }).catch(err => {
+                console.error(err);
+            }).catch(err => {
+                console.error(err);
+            })
+        })
+    </script>
+</body>
+</html>
