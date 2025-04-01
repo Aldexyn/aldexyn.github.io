@@ -26,7 +26,7 @@
             liff.scanCodeV2().then((result) => {
                 const profile = liff.getDecodedIDToken();
                 user.textContent = 'ユーザーID' + profile.sub;
-                mountain.textContent = 'ユーザーID' + result;
+                mountain.textContent = 'スキー場' + result.value;
                 btn.removeAttribute('hidden');
             })
         })
