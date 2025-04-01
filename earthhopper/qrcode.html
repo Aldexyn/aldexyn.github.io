@@ -9,25 +9,25 @@
 </head>
 <body>
     <div class="container">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, libero, et harum modi eum cumque necessitatibus voluptates neque non ex eaque fugit ipsa culpa a mollitia consectetur quo amet odit!</p>
-        <button id="scan" class="btn btn-primary">QRコード読み取り</button>
-        <p id="result"></p>
+        <h3>ABCスキー場</h3>
+        <p id="user"></p>
+        <p id="err"></p>
     </div>
     <script>
-        liff.init({ liffId: "2007179414-EXGKgBm1" }).then(() => {
-            document.getElementById('scan').addEventListener('click', () => {
-                scanQR();
+        const user = document.getElementById('user');
+        const error = document.getElementById('err');
+        liff.init({
+            liffId: '2007179414-EXGKgBm1',
+        })
+        .then(() => {
+            liff.scanCodeV2().then((result) => {
+                const profile = liff.getDecodedIDToken();
+                user.textContent = profile.sub;
             })
         })
         .catch((err) => {
-            document.getElementById('result').textContent = err;
+            error.textContent = err;
         })
-
-        function scanQR() {
-            liff.scanCodeV2().then(result => {
-                document.getElementById('result').textContent = result;
-            })
-        }
     </script>
 </body>
 </html>
