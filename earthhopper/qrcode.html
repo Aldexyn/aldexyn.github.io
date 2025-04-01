@@ -7,11 +7,15 @@
     <title>QRCODEEEE</title>
 </head>
 <body>
-    <div class="container">
+    <div id="btn" class="container" hidden>
         <p id="user"></p>
         <p id="mountain"></p>
-        <p id="err"></p>
-        <button id="btn" class="btn btn-primary" hidden>Stripeで決済する</button>
+        <p id="mileage">マイレージ: 2,000マイル</p>
+        <div class="form-floating">
+            <input type="number" class="form-control">
+        </div>
+        <input type="number" class="">
+        <button class="btn btn-primary">Stripeで決済する</button>
     </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
     <script>
@@ -25,14 +29,11 @@
         .then(() => {
             liff.scanCodeV2().then((result) => {
                 const profile = liff.getDecodedIDToken();
-                user.textContent = 'ユーザーID' + profile.sub;
-                mountain.textContent = 'スキー場' + result.value;
+                user.textContent = 'ユーザーID: ' + profile.sub;
+                mountain.textContent = 'スキー場: ' + result.value;
                 btn.removeAttribute('hidden');
             })
-        })
-        .catch((err) => {
-            error.textContent = err;
-        })
+        });
     </script>
 </body>
 </html>
