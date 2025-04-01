@@ -11,11 +11,13 @@
         <p id="user"></p>
         <p id="mountain"></p>
         <p id="err"></p>
+        <button id="btn" class="btn btn-primary" hidden>Stripeで決済する</button>
     </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
     <script>
         const user = document.getElementById('user');
         const mountain = document.getElementById('mountain');
+        const btn = document.getElementById('btn');
         const error = document.getElementById('err');
         liff.init({
             liffId: '2007179414-EXGKgBm1',
@@ -25,6 +27,7 @@
                 const profile = liff.getDecodedIDToken();
                 user.textContent = 'ユーザーID' + profile.sub;
                 mountain.textContent = 'ユーザーID' + result;
+                btn.removeAttribute('hidden');
             })
         })
         .catch((err) => {
