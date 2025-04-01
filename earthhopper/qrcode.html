@@ -8,13 +8,14 @@
 </head>
 <body>
     <div class="container">
-        <h3>ABCスキー場</h3>
         <p id="user"></p>
+        <p id="mountain"></p>
         <p id="err"></p>
     </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
     <script>
         const user = document.getElementById('user');
+        const mountain = document.getElementById('mountain');
         const error = document.getElementById('err');
         liff.init({
             liffId: '2007179414-EXGKgBm1',
@@ -22,7 +23,8 @@
         .then(() => {
             liff.scanCodeV2().then((result) => {
                 const profile = liff.getDecodedIDToken();
-                user.textContent = profile.sub;
+                user.textContent = 'ユーザーID' + profile.sub;
+                mountain.textContent = 'ユーザーID' + result;
             })
         })
         .catch((err) => {
