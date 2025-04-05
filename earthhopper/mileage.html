@@ -33,13 +33,13 @@
                 longitude.textContent = '経度' + longitude;
             }, function (error) {
                 if (error.code === error.PERMISSION_DENIED) {
-                    alert('Permit geolocation')
+                    alert('位置情報の取得が許可されていません')
                 } else {
-                    console.error('Failed', error);
+                    alert('Failed' + error);
                 }
             })
         } else {
-            console.log('Not Compatible')
+            alert('Not Compatible')
         }
     </script>
 </body>
