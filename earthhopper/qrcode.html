@@ -29,8 +29,7 @@
         .then(() => {
             btn.addEventListener('click', function() {
                 liff.scanCodeV2().then((result) => {
-                    const profile = liff.getDecodedIDTsoken();
-                    reader.textContent = profile + '/' + result;
+                    reader.textContent = "QR Code success"
                 })
             })
         });
