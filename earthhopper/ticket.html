@@ -9,11 +9,20 @@
 <body style="background-color: aliceblue;">
     <div class="container">
         <div style="text-align: center; padding: 30px 0;">
-            <img src="/earthhopper/logo.png" style="width: 100px;">
+            <img src="/earthhopper/logo.png" style="width: 200px;">
         </div>
         <div style="text-align: center;">
-            <img src="qr.png" style="width: 80%;">
+            <img src="qr.png" style="width: 100%;">
+        </div><br>
+        <div class="d-grid">
+            <button id="btn" class="btn btn-lg btn-secondary">閉じる</button>
         </div>
     </div>
+    <script>
+        const btn = document.getElementById('btn');
+        btn.addEventListener('click', function () {
+            liff.closeWindow();
+        })
+    </script>
 </body>
 </html>
