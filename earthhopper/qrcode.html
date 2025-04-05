@@ -17,19 +17,17 @@
             <button class="btn btn-secondary">位置情報の読み取りを許可</button>
             <button id="btn" class="btn btn-primary">QRコードリーダーを起動</button>
         </div>
-        <p id="reader"></p>
     </div>
     <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
     <script>
         const btn = document.getElementById('btn');
-        const reader = document.getElementById('reader');
         liff.init({
             liffId: '2007179414-EXGKgBm1',
         })
         .then(() => {
             btn.addEventListener('click', function() {
                 liff.scanCodeV2().then((result) => {
-                    reader.textContent = "QR Code success"
+                    window.location.href = 'checkout.html';
                 })
             })
         });
