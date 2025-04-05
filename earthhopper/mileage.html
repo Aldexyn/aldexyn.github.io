@@ -20,5 +20,23 @@
             </div>
         </div>
     </div>
+    <script>
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(function(position) {
+                const latitude = position.coords.latitude;
+                const longitude = position.coords.longitude;
+                console.log('Latitude: ' + latitude)
+                console.log('Longitude: ' + longitude)
+            }, function (error) {
+                if (error.code === error.PERMISSION_DENIED) {
+                    alert('Permit geolocation')
+                } else {
+                    console.error('Failed', error);
+                }
+            })
+        } else {
+            console.log('Not Compatible')
+        }
+    </script>
 </body>
 </html>
