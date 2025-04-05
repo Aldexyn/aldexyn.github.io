@@ -9,7 +9,7 @@
 </head>
 <body style="background-color: aliceblue;">
     <div class="container">
-        <div style="text-align: center; padding: 50px 0;">
+        <div style="text-align: center; padding: 30px 0;">
             <img src="/earthhopper/logo.png" style="width: 200px;">
         </div>
         <div class="container">
@@ -30,36 +30,34 @@
                 <div class="col"><b>6,000</b> 円</div>
             </div>
             <div class="row">
+                <div class="col">保有マイル</div>
+                <div class="col"><b>1,800</b> マイル</div>
+            </div>
+            <div class="row">
                 <div class="col">使用マイル</div>
-                <div class="col">
-                    <button class="btn border" data-bs-toggle="modal" data-bs-target="#modal">0 マイル</button>
-                    <div class="modal fade" id="modal" aria-hidden="true">
-                        <div class="modal-dialogue">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <div class="modal-title">マイルの使用</div>
-                                    <button class="btn-close" data-bs-dismiss="modal"></button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>保有マイル数</p>
-                                    <p>使用マイル数</p>
-                                </div>
-                                <div class="modal-footer">
-                                    <button class="btn btn-primary">適用</button>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col d-flex align-items-center">
+                    <div class="input-group">
+                        <input type="number" id="mileage" class="form-control" placeholder="0" max="1800">
+                        <span class="input-group-text" id="apply">適用</span>
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col">請求金額</div>
-                <div class="col"><b>6,000</b> 円</div>
+                <div class="col"><b id="price">6,000</b> 円</div>
             </div>
         </div>
         <div class="d-grid">
-            <button id="btn" class="btn btn-lg btn-primary">Stripeで決済</button>
+            <a href="ticket.html" class="btn btn-lg btn-primary">Stripeで決済</a>
         </div>
     </div>
+    <script>
+        const apply = document.getElementById('apply');
+        const mileage = document.getElementById('mileage');
+        const price = document.getElementById('price');
+        apply.addEventListener('click', function () {
+            price.textContent = (6000 - mileage.value).toLocaleString();
+        })
+    </script>
 </body>
 </html>
