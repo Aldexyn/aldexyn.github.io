@@ -31,7 +31,7 @@
             </div>
             <div class="row">
                 <div class="col">保有マイル</div>
-                <div class="col"><b>1,800</b> マイル</div>
+                <div class="col"><b id="balance">1,800</b> マイル</div>
             </div>
             <div class="row">
                 <div class="col">使用マイル</div>
@@ -53,10 +53,10 @@
     </div>
     <script>
         const apply = document.getElementById('apply');
-        const mileage = document.getElementById('mileage');
+        const balance = document.getElementById('balance');
         const price = document.getElementById('price');
         apply.addEventListener('click', function () {
-            mileage.textContent = (2000 - mileage.value).toLocaleString();
+            balance.textContent = (2000 - mileage.value).toLocaleString();
             price.textContent = (6000 - mileage.value).toLocaleString();
         })
     </script>
