@@ -19,14 +19,18 @@
                 </div>
             </div>
         </div>
+        <p id="latitude"></p>
+        <p id="longitude"></p>
     </div>
     <script>
+        const latitude = document.getElementById('latitude')
+        const longitude = document.getElementById('longitude')
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
                 const latitude = position.coords.latitude;
                 const longitude = position.coords.longitude;
-                console.log('Latitude: ' + latitude)
-                console.log('Longitude: ' + longitude)
+                latitude.textContent = '緯度' + latitude;
+                longitude.textContent = '経度' + longitude;
             }, function (error) {
                 if (error.code === error.PERMISSION_DENIED) {
                     alert('Permit geolocation')
