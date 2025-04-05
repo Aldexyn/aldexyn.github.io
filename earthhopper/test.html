@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注文確認ページ</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 900px;
+            margin: 30px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            font-size: 1.2em;
+            color: #444;
+        }
+
+        .section p {
+            font-size: 1em;
+            color: #666;
+        }
+
+        .section .input-group {
+            margin-top: 10px;
+        }
+
+        .section .input-group input {
+            padding: 10px;
+            width: 100%;
+            font-size: 1em;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            margin-top: 5px;
+        }
+
+        .price-details {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .price-details .total {
+            margin-top: 20px;
+            font-size: 1.3em;
+            color: #e74c3c;
+        }
+
+        .stripe-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background-color: #6772e5;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            margin-top: 30px;
+        }
+
+        .stripe-button:hover {
+            background-color: #5a6fd6;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>注文確認</h1>
+
+    <div class="section">
+        <h2>スキー場</h2>
+        <p>富士山スキーリゾート</p>
+    </div>
+
+    <div class="section">
+        <h2>日時</h2>
+        <p>2025年4月15日 10:00 AM</p>
+    </div>
+
+    <div class="section">
+        <h2>チケット価格</h2>
+        <p>¥10,000</p>
+    </div>
+
+    <div class="section">
+        <h2>使用マイル</h2>
+        <form id="checkout-form">
+            <div class="input-group">
+                <input type="number" id="miles" name="miles" min="0" max="10000" placeholder="使用マイル数を入力" required>
+            </div>
+        </form>
+    </div>
+
+    <div class="section price-details">
+        <h2>メンバー価格</h2>
+        <p id="member-price">¥10,000</p>
+    </div>
+
+    <div class="section">
+        <a href="https://checkout.stripe.com/pay/your_stripe_checkout_link" class="stripe-button" target="_blank">
+            Stripeで支払い
+        </a>
+    </div>
+</div>
+
+<script>
+    const milesInput = document.getElementById('miles');
+    const memberPriceElement = document.getElementById('member-price');
+    const originalPrice = 10000;
+
+    milesInput.addEventListener('input', function() {
+        const miles = parseInt(milesInput.value) || 0;
+        const memberPrice = originalPrice - miles;
+        memberPriceElement.textContent = `¥${memberPrice}`;
+    });
+</script>
+
+</body>
+</html>
