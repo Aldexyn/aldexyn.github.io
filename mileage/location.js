@@ -32,7 +32,7 @@ function checkNearbyFacility() {
 
             const nearby = facilities.find(facility => {
                 const dist = getDistance(userLat, userLng, facility.lat, facility.lng);
-                return dist <= 1000; // 10km以内
+                return dist <= 10000; // 10km以内
             });
 
             if (nearby) {
